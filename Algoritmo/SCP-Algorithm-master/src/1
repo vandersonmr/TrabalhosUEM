@@ -1,0 +1,207 @@
+criterioDeParada = 100
+pesoDeMelhorar = -5
+probabilidadeDeCopiarGene = 35
+tamanhoDaPopulacaoInicial = 50
+chanceDeMutar = 5
+quantidadeDeGenesMutados = 1 
+quantidadeDeFilhos = 20
+
+function geraPopulacao(n)
+    local conjuntoDeSolucoes = {}
+
+    for i = 0,n do
+        conjuntoDeSolucoes[i] = geraNovaSolucao()
+    end
+
+    return conjuntoDeSolucoes
+end
+
+function insereColunasAleatorias(pai,filho)
+    for chave,coluna in pairs(pai.colunas) do
+        if (not colunaEstaEmUso(coluna.indice,filho)) then
+            if (math.random(0,100)
+                + (colunaMelhoraSolucao(coluna.indice,filho) and pesoDeMelhorar or 0)
+                < probabilidadeDeCopiarGene) then
+
+                adicionaColuna(coluna.indice,filho)
+            end
+        end
+    end
+end
+
+-- n sexo aleatório entre os individuos.
+function geraFilho(pais)
+    local filho = geraSolucaoVazia()
+    insereColunasAleatorias(pais[1],filho)
+    insereColunasAleatorias(pais[2],filho)
+    return filho
+end
+
+function mutar(solucao)
+    local mutacoes = 0
+    for indice,coluna in pairs(solucao.colunas) do
+        if (mutacoes > quantidadeDeGenesMutados) then
+            return solucao
+        end
+        if (math.random(0,100) < 50) then
+            mutacoes = mutacoes + 1
+            removeColuna(coluna.indice,solucao)
+            indiceAleatorio = geraIndiceColunaAleatoriaNaoUsadoNa(solucao)
+            adicionaColuna(indiceAleatorio,solucao)
+        end
+    end
+    return solucao
+end
+
+function getMelhor(populacao)
+    local melhor = populacao[1]
+    local melhorPeso = populacao[1].peso
+    for indice,solucao in pairs(populacao) do
+        if (solucao.peso < melhorPeso) then
+            melhor = solucao
+            melhorPeso = solucao.peso
+        end
+    end
+    return melhor
+end
+
+function isValido(solucao)
+    return estaCompleta(solucao)
+end
+
+
+ultimaMedia = 0
+contador = 0
+function continuaMelhorando(populacao)
+    local mediaPeso = calculaMediaPeso(populacao)
+    if (math.abs(mediaPeso - ultimaMedia) < 1) then
+        contador = contador + 1
+    end
+    ultimaMedia = mediaPeso
+    return (contador < criterioDeParada)
+end
+
+function pesoTotalPopulacao(populacao)
+    local pesoTotal=0
+
+    for indice,solucao in pairs(populacao) do
+        pesoTotal=pesoTotal+solucao.peso
+    end
+
+    return pesoTotal
+end
+
+function retornaSolucaoMaisPesada(populacao)
+    local maisPesada = 0
+    local peso = 0
+    for indice,solucao in pairs(populacao) do
+        if (solucao.peso > peso) then
+            peso = solucao.peso
+            maisPesada = solucao
+        end
+    end
+    return maisPesada
+end
+
+function retornaPaisRandomicosDe(populacao)
+    local pesoTotal = pesoTotalPopulacao(populacao)
+    local maiorPeso = retornaSolucaoMaisPesada(populacao).peso + 1
+    local pais = {}
+
+    while(true) do
+        for indice,solucao in pairs(populacao) do
+            if (#pais == 2) then return pais end
+            local probabilidade = (maiorPeso - solucao.peso)    
+            local valorAleatorio = math.random(0,maiorPeso)
+
+            if (valorAleatorio <= probabilidade) then
+                table.insert(pais,solucao)
+            end
+        end
+    end
+end
+
+function calculaMediaPeso(populacao)
+    local pesoTotal = pesoTotalPopulacao(populacao)
+    return pesoTotal/#populacao
+end
+
+function selecionaNovaPopulacao(populacao,novaPopulacao)
+    local mediaPeso = calculaMediaPeso(populacao)
+    local adicionados = 0
+    
+    for indice,solucao in pairs(novaPopulacao) do
+        if (solucao.peso < mediaPeso) then
+            table.insert(populacao,solucao)
+            adicionados = adicionados + 1
+        end
+    end
+
+    for indice,solucao in pairs(populacao) do
+        if (solucao.peso > mediaPeso and adicionados > 0) then
+            adicionados = adicionados - 1
+            table.remove(populacao,indice)
+        end
+    end
+
+    return populacao
+end
+
+function imprimeValoresDeUmaColuna(coluna)
+    for t = 1,#coluna.valores do
+        print(coluna.valores[t])
+    end
+end
+
+function imprimeColunas(colunas)
+    for j = 1,#colunas do
+        imprimeValoresDeUmaColuna(colunas[j])
+        print("")
+    end
+end
+
+function imprimePopulacao(populacao)
+    for i = 0,#populacao do 
+        imprimeColunas(populacao[i].colunas)
+        print("Peso: "..populacao[i].peso)
+        print("---------------------")
+    end
+end
+
+function buscarMelhorSolucao(conjuntoDeColunas)
+    conjuntoDeColunas = conjuntoDeColunas 
+    local populacao = geraPopulacao(tamanhoDaPopulacaoInicial)
+
+    local pais = {}
+    local filho = {}
+    local filhoMutado = {}
+
+    while (continuaMelhorando(populacao)) do
+
+        local populacaoNova = {}
+        while(#populacaoNova ~= quantidadeDeFilhos) do
+
+            pais = retornaPaisRandomicosDe(populacao)
+            filho = geraFilho(pais)
+
+            if (math.random(0,100) < chanceDeMutar) then
+                filho = mutar(filho)
+            end
+
+            if (isValido(filho)) then 
+                table.insert(populacaoNova,filho)
+            end
+
+        end
+        
+        print(calculaMediaPeso(populacao).."  "..getMelhor(populacao))
+        populacao = selecionaNovaPopulacao(populacao,populacaoNova)
+        -- Busca local sobre todos os individuos 
+        -- da populacao intermediaria
+
+    end
+    
+    imprimeColunas(getMelhor(populacao).colunas)
+    print(getMelhor(populacao).peso)
+end
+

@@ -1,0 +1,25 @@
+01 - exemplo do material (slides)
+02 - grafo ciclo (Cycle graph) C5 (5 vértices e 5 arestas)
+03 - grafo da amizade (Friendship graph) F4 (9 vértices e 12 arestas)
+04 - grafo com 5 ciclos de tamanho 3 (11 vértices e 15 arestas)
+05 - grafo completo (Complete graph) K9 (9 vértices e 36 arestas)
+
+06 - grafo ciclo (Cycle graph) C10000 (10000 vértices e 10000 arestas)
+07 - grafo ciclo (Cycle graph) C20000 (20000 vértices e 20000 arestas)
+08 - grafo ciclo (Cycle graph) C40000 (40000 vértices e 40000 arestas)
+09 - grafo ciclo (Cycle graph) C80000 (80000 vértices e 80000 arestas)
+
+10 - grafo da amizade (Friendship graph) F10000 (20001 vértices e 30000 arestas)
+11 - grafo da amizade (Friendship graph) F20000 (40001 vértices e 60000 arestas)
+12 - grafo da amizade (Friendship graph) F40000 (80001 vértices e 120000 arestas)
+13 - grafo da amizade (Friendship graph) F80000 (160001 vértices e 240000 arestas)
+
+14 - grafo com 10000 ciclos de tamanho 3 (19999 vértices e 30000 arestas)
+15 - grafo com 20000 ciclos de tamanho 3 (39999 vértices e 60000 arestas)
+16 - grafo com 40000 ciclos de tamanho 3 (79999 vértices e 120000 arestas)
+17 - grafo com 80000 ciclos de tamanho 3 (159999 vértices e 240000 arestas)
+
+18 - grafo completo K245 (245 vértices e 29890 arestas)
+19 - grafo completo K347 (347 vértices e 60031 arestas)
+20 - grafo completo K491 (491 vértices e 120295 arestas)
+21 - grafo completo K693 (693 vértices e 239778 arestas)

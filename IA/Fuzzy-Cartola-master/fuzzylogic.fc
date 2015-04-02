@@ -1,0 +1,174 @@
+FUNCTION_BLOCK dummy
+
+    VAR_INPUT
+        RB:    REAL; (* RANGE(0 .. 100) *) 
+        FC:    REAL; (* RANGE(0 .. 100) *) 
+        A :    REAL; (* RANGE(0 .. 100) *)
+        F :    REAL; (* RANGE(0 .. 100) *)
+        FS:    REAL; (* RANGE(0 .. 100) *)
+        Gols:  REAL; (* RANGE(0 .. 100) *)
+        SG:  REAL; (* RANGE(0 .. 100) *)
+        GS:  REAL; (* RANGE(0 .. 100) *)
+        DD:  REAL; (* RANGE(0 .. 100) *)
+    END_VAR
+
+    VAR_OUTPUT
+        Meia : REAL; (* RANGE(0 .. 10) *) 
+        Atacante : REAL; (* RANGE(0 .. 10) *) 
+        Lateral : REAL; (* RANGE(0 .. 10) *) 
+        Zagueiro : REAL; (* RANGE(0 .. 10) *) 
+        Goleiro : REAL; (* RANGE(0 .. 10) *) 
+    END_VAR
+    
+    FUZZIFY GS
+        TERM Muitas  := (0,0) (3, 0.3) (11, 0.7) (100, 1);
+    END_FUZZIFY
+
+    FUZZIFY DD
+        TERM Bom     := (4, 0) (17, 0.7) (100, 1) ;
+        TERM Mediano := (0, 0) (3, 1) (17, 0) ;
+        TERM Ruim    := (0, 0.9) (2, 0.5) (4, 0) ;
+    END_FUZZIFY
+
+    FUZZIFY SG
+        TERM Muitas  := (0,0) (13, 0.5) (33, 0.7) (100, 0.8);
+    END_FUZZIFY
+
+    FUZZIFY A
+        TERM Bom     := (7, 0) (28, 0.5) (100, 1) ;
+        TERM Mediano := (0, 0) (7, 1) (50, 0) ;
+        TERM Ruim    := (0, 1) (10, 0.5) (28, 0) ;
+    END_FUZZIFY
+
+    FUZZIFY RB
+        TERM Bom     := (35, 0) (100, 1) ;
+        TERM Mediano := (4, 0) (15, 1) (45, 0) ;
+        TERM Ruim    := (0, 1) (10, 0.5) (17, 0) ;
+    END_FUZZIFY
+
+    FUZZIFY FC
+        TERM Muitas  := (0,0) (25, 0.5) (50, 0.70) (100, 0.8);
+    END_FUZZIFY
+     
+    FUZZIFY F
+        TERM Bom     := (20, 0) (40, 0.4) (100, 1);
+        TERM Mediano := (1, 0) (19, 1) (37, 0) ;
+        TERM Ruim    := (0, 1) (10, 0.7) (20, 0) ;
+    END_FUZZIFY
+
+    FUZZIFY Gols
+        TERM Muitos  := (0,0) (10, 0.4) (26, 0.60) (100, 1);
+    END_FUZZIFY
+
+    FUZZIFY FS
+        TERM Muitas  := (0,0) (23, 0.3) (40, 0.40) (100, 0.4);
+    END_FUZZIFY
+
+    DEFUZZIFY Meia
+        TERM Craque := 10 ;
+        TERM Excelente := 8;
+        TERM Mediano := 4 ;
+        TERM PeDeChinelo := 2;
+        ACCU:MAX;
+        METHOD: COGS;(*MoM;*)
+        DEFAULT := 0; 
+    END_DEFUZZIFY
+
+    DEFUZZIFY Atacante
+        TERM Craque := 10 ;
+        TERM Excelente := 8;
+        TERM Mediano := 4 ;
+        TERM PeDeChinelo := 2;
+        ACCU:MAX;
+        METHOD: COGS;(*MoM;*)
+        DEFAULT := 0; 
+    END_DEFUZZIFY
+
+    DEFUZZIFY Lateral
+        TERM Craque := 10 ;
+        TERM Excelente := 8;
+        TERM Mediano := 4 ;
+        TERM PeDeChinelo := 2;
+        ACCU:MAX;
+        METHOD: COGS;(*MoM;*)
+        DEFAULT := 0; 
+    END_DEFUZZIFY
+
+    DEFUZZIFY Zagueiro
+        TERM Craque := 10 ;
+        TERM Excelente := 8;
+        TERM Mediano := 4 ;
+        TERM PeDeChinelo := 2;
+        ACCU:MAX;
+        METHOD: COGS;(*MoM;*)
+        DEFAULT := 0; 
+    END_DEFUZZIFY
+
+    DEFUZZIFY Goleiro
+        TERM Craque := 10 ;
+        TERM Excelente := 8;
+        TERM Mediano := 4 ;
+        TERM PeDeChinelo := 2;
+        ACCU:MAX;
+        METHOD: COGS;(*MoM;*)
+        DEFAULT := 0; 
+    END_DEFUZZIFY
+
+    RULEBLOCK first
+        AND:MIN;
+        (*ACCU:MAX;*)
+        RULE 1: IF (RB IS Bom) AND (A IS Bom) AND (FC IS NOT Muitas) THEN (Meia IS Craque);
+        RULE 2: IF (RB IS Bom) AND (A IS Mediano) AND (FC IS NOT Muitas) THEN (Meia IS Excelente);
+        RULE 3: IF (RB IS Bom) AND (A IS Ruim) AND (FC IS NOT Muitas) THEN (Meia IS Excelente);
+
+        RULE 4: IF (RB IS Mediano) AND (A IS Bom) AND (FC IS NOT Muitas) THEN (Meia IS Excelente);
+        RULE 5: IF (RB IS Mediano) AND (A IS Mediano) AND (FC IS NOT Muitas) THEN (Meia IS Mediano);
+        RULE 6: IF (RB IS Mediano) AND (A IS Ruim) AND (FC IS NOT Muitas) THEN (Meia IS Mediano);
+
+        RULE 7: IF (RB IS Ruim) AND (A IS Bom) AND (FC IS NOT Muitas) THEN (Meia IS Mediano);
+        RULE 8: IF (RB IS Ruim) AND (A IS Mediano) AND (FC IS NOT Muitas) THEN (Meia IS Mediano);
+        RULE 9: IF (RB IS Ruim) AND (A IS Ruim) AND (FC IS Muitas) THEN (Meia IS PeDeChinelo);
+        
+
+        RULE 10: IF (F IS Bom) AND (A IS Bom) AND (FS IS Muitas) THEN (Atacante IS Craque);
+
+        RULE 11: IF (F IS Bom) AND (A IS Mediano) AND (FS IS Muitas) THEN (Atacante IS Excelente);
+        RULE 12: IF (F IS Bom) AND (A IS Ruim) AND (FS IS Muitas) THEN (Atacante IS Mediano);
+
+        RULE 13: IF (F IS Mediano) AND (A IS Mediano) AND (FS IS Muitas) THEN (Atacante IS Mediano);
+        RULE 14: IF (F IS Mediano) AND (A IS Ruim) AND (FS IS Muitas) THEN (Atacante IS PeDeChinelo);
+
+        RULE 15: IF (F IS Ruim) AND (A IS Mediano) THEN (Atacante IS PeDeChinelo);
+        RULE 16: IF (F IS Ruim) AND (A IS Ruim) THEN (Atacante IS PeDeChinelo);
+
+        RULE 17: IF (Gols IS Muitos) THEN (Atacante IS Excelente);
+
+
+        RULE 18: IF (RB IS Bom) AND (A IS Bom) AND (FC IS NOT Muitas) THEN (Lateral IS Craque);
+        RULE 19: IF (RB IS Bom) AND (A IS Mediano) AND (FC IS NOT Muitas) THEN (Lateral IS Excelente);
+        RULE 20: IF (RB IS Bom) AND (A IS Ruim) AND (FC IS NOT Muitas) THEN (Lateral IS Excelente);
+
+        RULE 21: IF (RB IS Mediano) AND (A IS Bom) AND (FC IS NOT Muitas) THEN (Lateral IS Excelente);
+        RULE 22: IF (RB IS Mediano) AND (A IS Mediano) AND (FC IS NOT Muitas) THEN (Lateral IS Mediano);
+        RULE 23: IF (RB IS Mediano) AND (A IS Ruim) AND (FC IS NOT Muitas) THEN (Lateral IS Mediano);
+
+        RULE 24: IF (RB IS Ruim) AND (A IS Bom) AND (FC IS NOT Muitas) THEN (Lateral IS Mediano);
+        RULE 25: IF (RB IS Ruim) AND (A IS Mediano) AND (FC IS NOT Muitas) THEN (Lateral IS Mediano);
+        RULE 26: IF (RB IS Ruim) AND (A IS Ruim) AND (FC IS Muitas) THEN (Lateral IS PeDeChinelo);
+
+        RULE 27: IF (SG IS Muitas) THEN (Lateral IS Craque);
+
+        RULE 28: IF (RB IS Bom) AND (FC IS NOT Muitas) THEN (Zagueiro IS Craque);
+        RULE 29: IF (RB IS Mediano) AND (FC IS NOT Muitas) THEN (Zagueiro IS Mediano);
+        RULE 30: IF (RB IS Ruim) AND (FC IS NOT Muitas) THEN (Zagueiro IS PeDeChinelo);
+
+        RULE 31: IF (SG IS Muitas) THEN (Zagueiro IS Craque);
+
+        RULE 32: IF (DD IS Bom) AND (GS IS NOT Muitas) THEN (Goleiro IS Craque);
+        RULE 33: IF (DD IS Mediano) AND (GS IS NOT Muitas) THEN (Goleiro IS Mediano);
+        RULE 34: IF (DD IS Ruim) OR (GS IS Muitas) THEN (Goleiro IS PeDeChinelo);
+
+        RULE 35: IF (SG IS Muitas) THEN (Goleiro IS Excelente);
+   END_RULEBLOCK
+
+END_FUNCTION_BLOCK

@@ -1,0 +1,7 @@
+src/ruby/run tsp-nn testes/tsp/cormen/35-2.tsp      : OK (custo: 16, tempo: 12ms)
+src/ruby/run tsp-nn testes/tsp/tsplib/1-berlin52.tsp: OK (custo: 8181, tempo: 63ms)
+src/ruby/run tsp-nn testes/tsp/tsplib/2-kroA100.tsp : OK (custo: 28244, tempo: 283ms)
+src/ruby/run tsp-nn testes/tsp/tsplib/3-kroB200.tsp : OK (custo: 37067, tempo: 2s 162ms)
+src/ruby/run tsp-nn testes/tsp/tsplib/4-rd400.tsp   : OK (custo: 18089, tempo: 20s 474ms)
+src/ruby/run tsp-nn testes/tsp/tsplib/5-rat783.tsp  : OK (custo: 11250, tempo: 3m 4s)
+src/ruby/run tsp-nn testes/tsp/tsplib/6-d1655.tsp   : 

@@ -1,0 +1,2 @@
+#!/bin/bash
+for i in $(ls -Fa | grep \*$ | sed s/*//g | sed s/run//g); do ./$i --log_level=test_suite;done;

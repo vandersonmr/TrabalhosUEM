@@ -1,0 +1,6 @@
+x0 = x0 + 15;
+LOOP x0 DO
+  x1 = x1 + 2;
+END;
+PRINT x1;
+PRINT x0;

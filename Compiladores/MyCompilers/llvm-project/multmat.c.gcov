@@ -1,0 +1,53 @@
+        -:    0:Source:multmat.c
+        -:    0:Graph:multmat.gcno
+        -:    0:Data:multmat.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <cstdlib>
+        -:    3:
+        -:    4:void mult_mat(int *a, int *b, int *c, int n);
+        -:    5:
+        -:    6:int main(){
+        1:    7:	int n = 750;
+        1:    8:	int* a = (int*) malloc(sizeof(int) * n*n);
+        1:    9:	int* b = (int*) malloc(sizeof(int) * n*n);
+        1:   10:	int* c = (int*) malloc(sizeof(int) * n*n);
+        -:   11:
+   562501:   12:	for(int i = 0; i < n*n; i++) {
+        1:   12-block  0
+   562501:   12-block  1
+   562500:   12-block  2
+   562500:   13:		a[i] = i;
+   562500:   14:		b[i] = i/2;
+   562500:   15:	}
+   562500:   15-block  0
+        -:   16:
+        1:   17:	mult_mat(a, b, c, n);
+        1:   18:	return 0;
+        1:   18-block  0
+        -:   19:}
+        -:   20:
+        -:   21:void mult_mat(int *a, int *b, int *c, int n){
+      751:   22:	for(int i=0;i<n;i++){
+        1:   22-block  0
+      751:   22-block  1
+      750:   22-block  2
+   563250:   23:		for(int j=0;j<n;j++){
+      750:   23-block  0
+   563250:   23-block  1
+   562500:   23-block  2
+   562500:   24:			c[i+n*j] = 0;
+422437500:   25:			for(int k=0;k<n;k++){
+   562500:   25-block  0
+422437500:   25-block  1
+421875000:   25-block  2
+421875000:   26:				c[i+n*j] += a[k+n*j] * b[i+n*k];
+421875000:   27:			}					
+421875000:   27-block  0
+   562500:   28:		}
+   562500:   28-block  0
+      750:   29:	}
+      750:   29-block  0
+        1:   30:};
+        1:   30-block  0

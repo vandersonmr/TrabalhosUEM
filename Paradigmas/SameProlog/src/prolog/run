@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cd src/prolog && swipl -q -s resame_main.pl -g main -t halt -- $@

@@ -1,0 +1,22 @@
+#!/usr/bin/gnuplot
+@png
+set output "output.png"
+set title "Benchmarks"
+C = "#99ffff"; Cpp = "#4671d5"; Java = "#ff0000"; Python = "#f36e00"
+set auto x
+# set yrange [0:10]
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set xtic scale 0
+set title "Miss Cache L1"
+set xlabel "Quantidade de threads"
+set ylabel "Miss cache L1"
+set xtics font "Times-Roman, 20" 
+set ytics font "Times-Roman, 20" 
+set title font "Times-Roman, 30" 
+set xlabel font "Times-Roman, 30" 
+set ylabel font "Times-Roman, 30" 
+# 2, 3, 4, 5 are the indexes of the columns; 'fc' stands for 'fillcolor'
+plot 'miss' using 2:xtic(1) ti col fc rgb C, '' u 3 ti col fc rgb Cpp, '' u 4 ti col fc rgb Java, '' u 5 ti col fc rgb Python, '' u 6 ti col fc rgb Python, '' u 7 ti col fc rgb Python, '' u 8 ti col fc rgb Python

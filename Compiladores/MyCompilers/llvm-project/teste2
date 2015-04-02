@@ -1,0 +1,46 @@
+; ModuleID = 'Loop JIT'
+
+@"0" = common global i32 0
+@"1" = common global i32 0
+@.str = private constant [4 x i8] c"%d\0A\00"
+@.str1 = private constant [4 x i8] c"%d\0A\00"
+
+define void @main() {
+entrypoint:
+  %"0" = load i32* @"0"
+  %tmp = add i32 %"0", 15
+  store i32 %tmp, i32* @"0"
+  br label %loop
+
+loop:                                             ; preds = %loop, %entrypoint
+  %"1" = load i32* @"1"
+  %tmp1 = add i32 %"1", 2
+  store i32 %tmp1, i32* @"1"
+  %"02" = load i32* @"0"
+  %loopcond = icmp eq i32 %"02", 0
+  %tmp3 = sub i32 %"02", 1
+  store i32 %tmp3, i32* @"0"
+  br i1 %loopcond, label %afterloop, label %loop
+
+afterloop:                                        ; preds = %loop
+  br label %loop4
+
+loop4:                                            ; preds = %loop4, %afterloop
+  %"05" = load i32* @"0"
+  %tmp6 = sub i32 %"05", 2
+  store i32 %tmp6, i32* @"0"
+  %"17" = load i32* @"1"
+  %loopcond8 = icmp eq i32 %"17", 0
+  %tmp9 = sub i32 %"17", 1
+  store i32 %tmp9, i32* @"1"
+  br i1 %loopcond8, label %afterloop10, label %loop4
+
+afterloop10:                                      ; preds = %loop4
+  %"111" = load i32* @"1"
+  %0 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str, i8 0, i8 0), i32 %"111")
+  %"012" = load i32* @"0"
+  %1 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str1, i8 0, i8 0), i32 %"012")
+  ret void
+}
+
+declare i32 @printf(i8*, ...)

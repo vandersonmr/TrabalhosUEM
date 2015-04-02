@@ -1,0 +1,9 @@
+.data
+	.texto "Ola mundo"
+.text
+global start
+.sair
+	exit
+.start
+	sys texto,3
+	jump sair

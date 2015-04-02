@@ -1,0 +1,25 @@
+.data
+    .rot1 "Digite N => "
+    .rot2 "Digite um Numero => "
+    .rot3 "Media => "
+    .rot4 ", "
+.text
+global start
+.start
+    sys rot1,3
+    sys n,1
+    mov b,n
+    mov s,0
+.volta
+    sys rot2,3
+    sys a,1
+    add s,s,a
+    sub b,b,1
+    jumpp volta,b
+    div c,s,n
+    rest d,s,n
+    sys rot3,3
+    sys c,2
+    sys rot4,3
+    sys d,2
+    exit

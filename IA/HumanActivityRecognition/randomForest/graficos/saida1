@@ -1,0 +1,253 @@
+Carregando dados...feito.
+Criando florestas...
+Floresta 1/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 53.67%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 539 222 181  67 118  99   0.5603589
+2 311 331 248  46  77  60   0.6915191
+3 276 219 379  26  47  39   0.6156187
+4 100  62  32 527 339 226   0.5902022
+5  95  40  31 275 813 120   0.4082969
+6 134  67  51 219 119 817   0.4193319
+                Test set error rate: 54.7%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 256  80  54  25  50  31   0.4838710
+2 155 138 100  17  30  31   0.7070064
+3 149  74 128  20  30  19   0.6952381
+4  37  21  16 205 133  79   0.5824847
+5  61  27  21 106 278  39   0.4774436
+6  56  12  19  71  49 330   0.3854749
+Floresta 2/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 13.57%
+Confusion matrix:
+    1   2   3    4    5    6 class.error
+1 992  35  63    7  129    0 0.190864600
+2  68 885  70    2   48    0 0.175209692
+3 117  71 725   16   57    0 0.264705882
+4  20   3  18 1216   29    0 0.054432348
+5 120  38  35   50 1131    0 0.176855895
+6   0   0   0    2    0 1405 0.001421464
+                Test set error rate: 45.13%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 122 123  78  60 113   0   0.7540323
+2 104 287  24  33  23   0   0.3906582
+3 101  76 161  46  36   0   0.6166667
+4  25  26   7 381  52   0   0.2240326
+5 144 117  41 101 129   0   0.7575188
+6   0   0   0   0   0 537   0.0000000
+Floresta 3/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 59.21%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 567 355 237  16  23  28   0.5375204
+2 435 327 235  15  31  30   0.6952470
+3 321 251 367  10  17  20   0.6277890
+4  43  37  12 380 437 377   0.7045101
+5  27  23  11 360 677 276   0.5072780
+6  60  52  28 330 256 681   0.5159915
+                Test set error rate: 58.94%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 234 137 100   5   6  14   0.5282258
+2 203 143  93  11  12   9   0.6963907
+3 161 116 109   9  15  10   0.7404762
+4  20  11   3 167 163 127   0.6598778
+5  11   6   7 141 259 108   0.5131579
+6  13   7   8 110 101 298   0.4450652
+Floresta 4/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 49.01%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 674 134 140  65 141  72   0.4502447
+2 173 617 236   9  14  24   0.4249767
+3 177 285 463  16  24  21   0.5304260
+4  88  10  15 609 288 276   0.5264386
+5 185  19  18 267 645 240   0.5305677
+6 123  22  25 252 244 741   0.4733475
+                Test set error rate: 53.44%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 246  57  77  27  48  41   0.5040323
+2  69 242 131  10  11   8   0.4861996
+3  70 130 194   4  15   7   0.5380952
+4  54  12   6 211  92 116   0.5702648
+5  94  11  19  82 215 111   0.5958647
+6  51   8   0 113 101 264   0.5083799
+Floresta 5/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 59.44%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 476 357 279  35  34  45   0.6117455
+2 415 334 248  27  21  28   0.6887232
+3 348 247 358   9  13  11   0.6369168
+4  43  18  13 571 286 355   0.5559876
+5  40  28   8 305 639 354   0.5349345
+6  49  30  11 340 373 604   0.5707178
+                Test set error rate: 59.01%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 210 129 127   8  16   6   0.5766129
+2 161 144 131  13  13   9   0.6942675
+3 143 111 137  11  12   6   0.6738095
+4  12   3   3 208 119 146   0.5763747
+5  14  15  13 114 268 108   0.4962406
+6  16   8   2 157 113 241   0.5512104
+Floresta 6/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 47.8%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 857 337  29   1   1   1   0.3009788
+2 430 530 113   0   0   0   0.5060578
+3  47 100 839   0   0   0   0.1490872
+4   4   1   0 468 414 399   0.6360809
+5   0   0   0 376 581 417   0.5771470
+6   7   9   7 366 455 563   0.5998579
+                Test set error rate: 49.85%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 370 110  16   0   0   0   0.2540323
+2 260 193  18   0   0   0   0.5902335
+3  23  61 335   0   0   1   0.2023810
+4   1   1   0 149 182 158   0.6965377
+5   0   1   0 126 219 186   0.5883459
+6   0   0   1 135 189 212   0.6052142
+Floresta 7/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 47.76%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 850 339  34   1   1   1   0.3066884
+2 416 550 107   0   0   0   0.4874185
+3  51  96 839   0   0   0   0.1490872
+4   4   1   0 474 403 404   0.6314152
+5   0   0   0 384 562 428   0.5909753
+6   7   8   7 375 444 566   0.5977257
+                Test set error rate: 50.63%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 364 117  15   0   0   0   0.2661290
+2 272 183  16   0   0   0   0.6114650
+3  25  63 331   0   0   1   0.2119048
+4   1   1   0 153 181 155   0.6883910
+5   0   1   0 127 219 185   0.5883459
+6   0   0   1 138 193 205   0.6182495
+Floresta 8/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 50.63%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 671 270 285   0   0   0   0.4526917
+2 275 753  44   0   0   1   0.2982293
+3 267  88 631   0   0   0   0.3600406
+4   0   1   0 484 400 401   0.6236392
+5   0   0   0 397 495 482   0.6397380
+6   0   7   0 367 437 596   0.5764037
+                Test set error rate: 52.83%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 250  98 148   0   0   0   0.4959677
+2 124 324  23   0   0   0   0.3121019
+3 127  46 247   0   0   0   0.4119048
+4   0   0   0 132 199 160   0.7311609
+5   0   2   0 117 218 195   0.5902256
+6   0   1   0 130 187 219   0.5921788
+Floresta 9/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 54.13%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 785 236 201   0   0   4   0.3597064
+2 359 400 311   0   0   3   0.6272134
+3 250 290 445   0   0   1   0.5486815
+4   1   1   0 486 416 382   0.6220840
+5   1   0   0 356 649 368   0.5276565
+6  13   2   0 355 430 607   0.5685856
+                Test set error rate: 58.64%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 285  99 107   0   0   5   0.4254032
+2 170 169 132   0   0   0   0.6411890
+3 157 121 141   0   0   1   0.6642857
+4   0   0   1 163 169 158   0.6680244
+5   4   1   0 112 258 157   0.5150376
+6   0   2   0 121 211 203   0.6219739
+Floresta 10/10...
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means[((3 *      i) - 2):(3 * i)], 562)], xtest = testData[, means[((3 * i) -      2):(3 * i)]], ytest = testLabels, importance = T, proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 1
+
+        OOB estimate of  error rate: 53.45%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 727 218 281   0   0   0   0.4070147
+2 279 626 166   0   0   2   0.4165890
+3 358 208 420   0   0   0   0.5740365
+4   0   1   0 485 363 437   0.6228616
+5   0   2   0 323 603 446   0.5611354
+6   0   2   1 401 442 561   0.6012793
+                Test set error rate: 58.19%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 244 123 129   0   0   0   0.5080645
+2  87 290  94   0   0   0   0.3842887
+3 194  88 138   0   0   0   0.6714286
+4   0   0   0 121 198 172   0.7535642
+5   0   5   0  87 254 186   0.5225564
+6   0   0   0 142 210 185   0.6554935
+feito.

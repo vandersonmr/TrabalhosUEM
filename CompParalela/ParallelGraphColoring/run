@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Run forest run!";
+
+for b in $(seq 1 13); do
+  for i in $(ls data/); do
+    psrun -p -c system.xml -o results/parallel/2/$i.$b -F text ./colour -p2 data/$i;  
+    psrun -p -c system.xml -o results/parallel/4/$i.$b -F text ./colour -p4 data/$i; 
+    psrun -p -c system.xml -o results/parallel/8/$i.$b -F text ./colour -p8 data/$i;  
+    psrun -p -c system.xml -o results/sequencial/$i.$b -F text ./colour -s data/$i;  
+  done;
+done;

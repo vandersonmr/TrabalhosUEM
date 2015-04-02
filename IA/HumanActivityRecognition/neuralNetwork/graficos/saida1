@@ -1,0 +1,680 @@
+Carregando dados...feito.
+Criando rede neurais...
+Rede neural 1/10...# weights:  106
+initial  value 13968.881588 
+iter  10 value 13064.104605
+iter  20 value 13011.322946
+iter  30 value 12981.966165
+iter  40 value 12880.952331
+iter  50 value 12714.610935
+iter  60 value 11969.933523
+iter  70 value 11199.504665
+iter  80 value 10806.899007
+iter  90 value 10664.787443
+iter 100 value 10593.737054
+iter 110 value 10550.405083
+iter 120 value 10487.883694
+iter 130 value 10441.819669
+iter 140 value 10397.174405
+iter 150 value 10355.447372
+iter 160 value 10306.349810
+iter 170 value 10259.988345
+iter 180 value 10212.293663
+iter 190 value 10146.927474
+iter 200 value 10068.101299
+iter 210 value 10031.207399
+iter 220 value 9987.416830
+iter 230 value 9959.448683
+iter 240 value 9946.454660
+iter 250 value 9929.701295
+iter 260 value 9907.882080
+iter 270 value 9879.368879
+iter 280 value 9836.945634
+iter 290 value 9818.285627
+iter 300 value 9808.467919
+iter 310 value 9800.016409
+iter 320 value 9786.009363
+iter 330 value 9773.542606
+iter 340 value 9766.753336
+iter 350 value 9762.059552
+iter 360 value 9757.303838
+iter 370 value 9753.264622
+iter 380 value 9743.662146
+iter 390 value 9727.607876
+iter 400 value 9708.656429
+iter 410 value 9699.031126
+iter 420 value 9695.764040
+iter 430 value 9691.758866
+iter 440 value 9689.646697
+iter 450 value 9689.269256
+iter 460 value 9688.364764
+iter 470 value 9686.767982
+iter 480 value 9681.931908
+iter 490 value 9673.891418
+iter 500 value 9658.959105
+final  value 9658.959105 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 265 179 159  43  28  62
+  2  35 121  64   6   8   9
+  3  43  61  99   4  11  11
+  4  19  21  16 246 138 143
+  5  70  49  48 140 313  28
+  6  64  40  34  52  34 284
+Rede neural 2/10...# weights:  106
+initial  value 15548.817472 
+iter  10 value 8815.028393
+iter  20 value 7174.041098
+iter  30 value 6812.913908
+iter  40 value 6480.222511
+iter  50 value 6161.488171
+iter  60 value 5873.235930
+iter  70 value 5666.163909
+iter  80 value 5521.445482
+iter  90 value 5442.844036
+iter 100 value 5387.250251
+iter 110 value 5355.192227
+iter 120 value 5336.303754
+iter 130 value 5321.744863
+iter 140 value 5306.793417
+iter 150 value 5299.919654
+iter 160 value 5290.622617
+iter 170 value 5277.175415
+iter 180 value 5265.464503
+iter 190 value 5258.317161
+iter 200 value 5252.780506
+iter 210 value 5244.304179
+iter 220 value 5240.055672
+iter 230 value 5237.552190
+iter 240 value 5230.227732
+iter 250 value 5216.934064
+iter 260 value 5205.440277
+iter 270 value 5187.014189
+iter 280 value 5174.562154
+iter 290 value 5164.722561
+iter 300 value 5154.433833
+iter 310 value 5146.209810
+iter 320 value 5137.451367
+iter 330 value 5131.482835
+iter 340 value 5126.905203
+iter 350 value 5122.280105
+iter 360 value 5119.344979
+iter 370 value 5116.970608
+iter 380 value 5113.440690
+iter 390 value 5111.049059
+iter 400 value 5109.118804
+iter 410 value 5107.080789
+iter 420 value 5104.772197
+iter 430 value 5103.618706
+iter 440 value 5103.088407
+iter 450 value 5099.839460
+iter 460 value 5096.810914
+iter 470 value 5090.990411
+iter 480 value 5083.367092
+iter 490 value 5080.726383
+iter 500 value 5077.826864
+final  value 5077.826864 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 118  92 112  11  76   0
+  2 105 208  73   2  60   0
+  3  38  33 165   5   7   0
+  4  48  52  18 375  60   0
+  5 187  86  52  98 329   0
+  6   0   0   0   0   0 537
+Rede neural 3/10...# weights:  106
+initial  value 13497.677968 
+iter  10 value 13122.814166
+iter  20 value 13044.462853
+iter  30 value 12683.562629
+iter  40 value 12178.900020
+iter  50 value 10968.327615
+iter  60 value 10263.939853
+iter  70 value 9874.203383
+iter  80 value 9631.960651
+iter  90 value 9460.066890
+iter 100 value 9339.164402
+iter 110 value 9260.802537
+iter 120 value 9212.520380
+iter 130 value 9180.446490
+iter 140 value 9155.858320
+iter 150 value 9125.935888
+iter 160 value 9102.118183
+iter 170 value 9076.636952
+iter 180 value 9051.976768
+iter 190 value 9031.513639
+iter 200 value 9017.610834
+iter 210 value 8994.879670
+iter 220 value 8966.936607
+iter 230 value 8953.852301
+iter 240 value 8948.844499
+iter 250 value 8942.536428
+iter 260 value 8933.363874
+iter 270 value 8919.964696
+iter 280 value 8911.839260
+iter 290 value 8889.524354
+iter 300 value 8874.641146
+iter 310 value 8867.601070
+iter 320 value 8862.213902
+iter 330 value 8856.223808
+iter 340 value 8847.337100
+iter 350 value 8838.003728
+iter 360 value 8832.101154
+iter 370 value 8830.207202
+iter 380 value 8827.293257
+iter 390 value 8824.577375
+iter 400 value 8823.280795
+iter 410 value 8822.557651
+iter 420 value 8821.914194
+iter 430 value 8821.519746
+iter 440 value 8820.892991
+iter 450 value 8820.875164
+iter 460 value 8820.830521
+iter 470 value 8820.713395
+iter 480 value 8820.627539
+iter 490 value 8820.414607
+iter 500 value 8820.068854
+final  value 8820.068854 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 405 364 280  26  21  18
+  2  25  31  25   1   3  13
+  3  22  33  64   0   0   1
+  4  10   9   4  34  40  25
+  5  11  14  17 203 319 103
+  6  23  20  30 227 149 377
+Rede neural 4/10...# weights:  106
+initial  value 15141.846716 
+iter  10 value 13076.988585
+iter  20 value 12787.750770
+iter  30 value 12136.422382
+iter  40 value 11012.723712
+iter  50 value 10566.463154
+iter  60 value 10233.609682
+iter  70 value 9863.862823
+iter  80 value 9742.676347
+iter  90 value 9664.902566
+iter 100 value 9586.312038
+iter 110 value 9478.628525
+iter 120 value 9394.192716
+iter 130 value 9322.646351
+iter 140 value 9275.947259
+iter 150 value 9252.605917
+iter 160 value 9226.569843
+iter 170 value 9211.477664
+iter 180 value 9194.723047
+iter 190 value 9179.089298
+iter 200 value 9169.839659
+iter 210 value 9153.902504
+iter 220 value 9147.981180
+iter 230 value 9146.111098
+iter 240 value 9142.680162
+iter 250 value 9137.740258
+iter 260 value 9119.754259
+iter 270 value 9100.399587
+iter 280 value 9080.570937
+iter 290 value 9065.523078
+iter 300 value 9042.798018
+iter 310 value 9031.944062
+iter 320 value 9022.138919
+iter 330 value 9006.595661
+iter 340 value 9000.331122
+iter 350 value 8993.978316
+iter 360 value 8990.672591
+iter 370 value 8985.121989
+iter 380 value 8979.903202
+iter 390 value 8969.076111
+iter 400 value 8962.126530
+iter 410 value 8959.373590
+iter 420 value 8956.050463
+iter 430 value 8954.509005
+iter 440 value 8954.306248
+iter 450 value 8953.767456
+iter 460 value 8952.928722
+iter 470 value 8951.367677
+iter 480 value 8949.534406
+iter 490 value 8947.467148
+iter 500 value 8945.511352
+final  value 8945.511352 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 306 113  77  41 140  46
+  2  30 222 114   5   4   6
+  3  57 110 209   3  10   0
+  4  20   8   3 281 128 223
+  5  73  11  15  93 192 121
+  6  10   7   2  68  58 141
+Rede neural 5/10...# weights:  106
+initial  value 13843.705551 
+iter  10 value 13074.236017
+iter  20 value 12626.766558
+iter  30 value 10331.019007
+iter  40 value 9489.098544
+iter  50 value 9243.414135
+iter  60 value 9126.461622
+iter  70 value 9056.789395
+iter  80 value 8985.236033
+iter  90 value 8937.069234
+iter 100 value 8914.247648
+iter 110 value 8900.763482
+iter 120 value 8892.421333
+iter 130 value 8886.656504
+iter 140 value 8884.061466
+iter 150 value 8880.811400
+iter 160 value 8877.868977
+iter 170 value 8875.817319
+iter 180 value 8871.390455
+iter 190 value 8867.611499
+iter 200 value 8863.191013
+iter 210 value 8857.031784
+iter 220 value 8853.126475
+iter 230 value 8848.583654
+iter 240 value 8846.484104
+iter 250 value 8844.596390
+iter 260 value 8839.770248
+iter 270 value 8833.809007
+iter 280 value 8826.346771
+iter 290 value 8817.988476
+iter 300 value 8812.271665
+iter 310 value 8809.144129
+iter 320 value 8804.966677
+iter 330 value 8801.660041
+iter 340 value 8798.808217
+iter 350 value 8795.789107
+iter 360 value 8792.023191
+iter 370 value 8788.443082
+iter 380 value 8782.847553
+iter 390 value 8777.158020
+iter 400 value 8763.580391
+iter 410 value 8748.464057
+iter 420 value 8737.505682
+iter 430 value 8731.934729
+iter 440 value 8728.473188
+iter 450 value 8726.834826
+iter 460 value 8726.276278
+iter 470 value 8725.792135
+iter 480 value 8725.385061
+iter 490 value 8724.682075
+iter 500 value 8723.742294
+final  value 8723.742294 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 291 268 222  13  32  21
+  2  54  55  52   2   1   2
+  3 108 106 106   0   1   0
+  4  10  13  12  82  44  43
+  5  21  13  17 110 259  94
+  6  12  16  11 284 195 377
+Rede neural 6/10...# weights:  106
+initial  value 14329.048309 
+iter  10 value 7588.561071
+iter  20 value 6986.531018
+iter  30 value 6774.592356
+iter  40 value 6669.532179
+iter  50 value 6552.159522
+iter  60 value 6492.126856
+iter  70 value 6450.917980
+iter  80 value 6422.429467
+iter  90 value 6409.369281
+iter 100 value 6397.352219
+iter 110 value 6385.568436
+iter 120 value 6373.690391
+iter 130 value 6366.580521
+iter 140 value 6359.326000
+iter 150 value 6352.368942
+iter 160 value 6345.241000
+iter 170 value 6338.300426
+iter 180 value 6333.707482
+iter 190 value 6330.975926
+iter 200 value 6328.265109
+iter 210 value 6325.935175
+iter 220 value 6325.055299
+iter 230 value 6324.234373
+iter 240 value 6321.929534
+iter 250 value 6320.033929
+iter 260 value 6318.124688
+iter 270 value 6316.317876
+iter 280 value 6314.951788
+iter 290 value 6314.019207
+iter 300 value 6313.240648
+iter 310 value 6312.196420
+iter 320 value 6311.585196
+iter 330 value 6311.206633
+iter 340 value 6310.871625
+iter 350 value 6310.178371
+iter 360 value 6309.015604
+iter 370 value 6307.905380
+iter 380 value 6306.418835
+iter 390 value 6305.351858
+iter 400 value 6303.898136
+iter 410 value 6302.082434
+iter 420 value 6301.122310
+iter 430 value 6300.486940
+iter 440 value 6300.376159
+iter 450 value 6300.201473
+iter 460 value 6300.012099
+iter 470 value 6299.868956
+iter 480 value 6299.516896
+iter 490 value 6299.160827
+iter 500 value 6298.140764
+final  value 6298.140764 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 397 309  32   0   1   0
+  2  86 151  45   1   1   0
+  3  12  11 343   0   0   0
+  4   0   0   0 208 109 186
+  5   0   0   0 130 187 121
+  6   1   0   0 152 234 230
+Rede neural 7/10...# weights:  106
+initial  value 13865.363424 
+iter  10 value 7776.977273
+iter  20 value 6941.748674
+iter  30 value 6760.826511
+iter  40 value 6638.523598
+iter  50 value 6569.159549
+iter  60 value 6521.252404
+iter  70 value 6467.429810
+iter  80 value 6434.822896
+iter  90 value 6416.683505
+iter 100 value 6403.330228
+iter 110 value 6396.731207
+iter 120 value 6389.324513
+iter 130 value 6379.890120
+iter 140 value 6369.858756
+iter 150 value 6365.432334
+iter 160 value 6361.945704
+iter 170 value 6360.290687
+iter 180 value 6359.024149
+iter 190 value 6356.830400
+iter 200 value 6353.833303
+iter 210 value 6351.272715
+iter 220 value 6349.986013
+iter 230 value 6348.847239
+iter 240 value 6346.678907
+iter 250 value 6343.119663
+iter 260 value 6339.011260
+iter 270 value 6335.527899
+iter 280 value 6332.292224
+iter 290 value 6329.501436
+iter 300 value 6326.455871
+iter 310 value 6324.670813
+iter 320 value 6322.891598
+iter 330 value 6321.903115
+iter 340 value 6321.216500
+iter 350 value 6320.486144
+iter 360 value 6319.891323
+iter 370 value 6319.322142
+iter 380 value 6318.831431
+iter 390 value 6318.344817
+final  value 6317.893915 
+converged
+   testLabels
+      1   2   3   4   5   6
+  1 397 297  35   1   0   0
+  2  87 162  42   0   1   0
+  3  11  12 343   0   0   0
+  4   0   0   0 162  80 121
+  5   0   0   0 131 207 126
+  6   1   0   0 197 244 290
+Rede neural 8/10...# weights:  106
+initial  value 14298.360991 
+iter  10 value 8230.363372
+iter  20 value 7318.722793
+iter  30 value 7088.604316
+iter  40 value 7002.382681
+iter  50 value 6952.298836
+iter  60 value 6914.530196
+iter  70 value 6896.576921
+iter  80 value 6883.016572
+iter  90 value 6867.762714
+iter 100 value 6854.823265
+iter 110 value 6849.974007
+iter 120 value 6846.367758
+iter 130 value 6843.083636
+iter 140 value 6840.279858
+iter 150 value 6836.890125
+iter 160 value 6833.478435
+iter 170 value 6830.362448
+iter 180 value 6828.300128
+iter 190 value 6826.353778
+iter 200 value 6824.452271
+iter 210 value 6822.824553
+iter 220 value 6821.887709
+iter 230 value 6821.374323
+iter 240 value 6818.115452
+iter 250 value 6815.584360
+iter 260 value 6813.260580
+iter 270 value 6810.762416
+iter 280 value 6807.799433
+iter 290 value 6804.155272
+iter 300 value 6800.053437
+iter 310 value 6796.767426
+iter 320 value 6794.851367
+iter 330 value 6793.013265
+iter 340 value 6791.315483
+iter 350 value 6790.657392
+iter 360 value 6790.166909
+iter 370 value 6789.826805
+iter 380 value 6789.165953
+iter 390 value 6788.828667
+iter 400 value 6788.674517
+iter 410 value 6788.530487
+iter 420 value 6788.320575
+iter 430 value 6788.191311
+iter 440 value 6788.183545
+iter 450 value 6788.114489
+iter 460 value 6787.910172
+iter 470 value 6787.602696
+iter 480 value 6787.359116
+iter 490 value 6787.136622
+iter 500 value 6786.880605
+final  value 6786.880605 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 292 102 130   0   0   0
+  2  55 355  38   0   2   1
+  3 149  13 252   0   0   0
+  4   0   0   0  95  31  47
+  5   0   0   0 105 164 102
+  6   0   1   0 291 335 387
+Rede neural 9/10...# weights:  106
+initial  value 15244.647949 
+iter  10 value 8838.809647
+iter  20 value 8123.019605
+iter  30 value 7966.324795
+iter  40 value 7813.769944
+iter  50 value 7742.153509
+iter  60 value 7664.885426
+iter  70 value 7620.981145
+iter  80 value 7569.380876
+iter  90 value 7541.638656
+iter 100 value 7519.474038
+iter 110 value 7502.484703
+iter 120 value 7490.227507
+iter 130 value 7478.470803
+iter 140 value 7470.093486
+iter 150 value 7463.746282
+iter 160 value 7458.948043
+iter 170 value 7454.452159
+iter 180 value 7449.826613
+iter 190 value 7445.862509
+iter 200 value 7442.358656
+iter 210 value 7440.713733
+iter 220 value 7437.944280
+iter 230 value 7433.652591
+iter 240 value 7432.430931
+iter 250 value 7429.948574
+iter 260 value 7426.653551
+iter 270 value 7422.421822
+iter 280 value 7419.294936
+iter 290 value 7416.052842
+iter 300 value 7411.945406
+iter 310 value 7409.111784
+iter 320 value 7407.116067
+iter 330 value 7405.576358
+iter 340 value 7404.575574
+iter 350 value 7403.951441
+iter 360 value 7403.277075
+iter 370 value 7402.716405
+iter 380 value 7402.158705
+iter 390 value 7401.696381
+iter 400 value 7400.984363
+iter 410 value 7400.754274
+iter 420 value 7400.241399
+iter 430 value 7399.678459
+iter 440 value 7399.124259
+iter 450 value 7398.920060
+iter 460 value 7398.868666
+iter 470 value 7398.761971
+iter 480 value 7398.637180
+iter 490 value 7397.859002
+iter 500 value 7396.862266
+final  value 7396.862266 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 297 167 177   1   1   1
+  2  77 185  73   0   2   0
+  3 105 118 167   0   0   0
+  4   0   0   0 203  86 139
+  5   0   0   0 121 239 148
+  6  17   1   3 166 204 249
+Rede neural 10/10...# weights:  106
+initial  value 14539.233508 
+iter  10 value 8911.037842
+iter  20 value 7896.740238
+iter  30 value 7614.848102
+iter  40 value 7455.614063
+iter  50 value 7400.860939
+iter  60 value 7371.796333
+iter  70 value 7357.868253
+iter  80 value 7346.353261
+iter  90 value 7339.322202
+iter 100 value 7332.489371
+iter 110 value 7327.368481
+iter 120 value 7322.574680
+iter 130 value 7317.924842
+iter 140 value 7315.598281
+iter 150 value 7311.932724
+iter 160 value 7306.491712
+iter 170 value 7301.948265
+iter 180 value 7297.759912
+iter 190 value 7292.964405
+iter 200 value 7287.592897
+iter 210 value 7283.069426
+iter 220 value 7281.785921
+iter 230 value 7280.671902
+iter 240 value 7278.675980
+iter 250 value 7275.506443
+iter 260 value 7270.095386
+iter 270 value 7263.823722
+iter 280 value 7260.433683
+iter 290 value 7258.223766
+iter 300 value 7256.826947
+iter 310 value 7255.728261
+iter 320 value 7253.945898
+iter 330 value 7252.058821
+iter 340 value 7250.912837
+iter 350 value 7250.212608
+iter 360 value 7249.431418
+iter 370 value 7248.647972
+iter 380 value 7248.282640
+iter 390 value 7247.344630
+iter 400 value 7246.326579
+iter 410 value 7244.877838
+iter 420 value 7243.861369
+iter 430 value 7242.935666
+iter 440 value 7242.877455
+iter 450 value 7242.181796
+iter 460 value 7241.200510
+iter 470 value 7240.884848
+iter 480 value 7240.418071
+iter 490 value 7240.034114
+iter 500 value 7239.817962
+final  value 7239.817962 
+stopped after 500 iterations
+   testLabels
+      1   2   3   4   5   6
+  1 267 109 203   0   0   0
+  2 124 286  90   0   2   0
+  3 105  76 126   0   0   0
+  4   0   0   0 124  16  76
+  5   0   0   1 291 429 328
+  6   0   0   0  76  85 133
+# weights:  746
+initial  value 18858.247713 
+iter  10 value 4815.098197
+iter  20 value 2416.642777
+iter  30 value 1508.067113
+iter  40 value 1076.867052
+iter  50 value 884.785762
+iter  60 value 794.962586
+iter  70 value 721.114663
+iter  80 value 670.999284
+iter  90 value 630.100626
+iter 100 value 570.683916
+iter 110 value 495.116718
+iter 120 value 444.004716
+iter 130 value 410.009358
+iter 140 value 372.853263
+iter 150 value 334.238713
+iter 160 value 302.847335
+iter 170 value 288.270515
+iter 180 value 274.342850
+iter 190 value 255.516489
+iter 200 value 243.149947
+iter 210 value 230.021857
+iter 220 value 217.715857
+iter 230 value 208.976802
+iter 240 value 199.492081
+iter 250 value 191.837389
+iter 260 value 185.197615
+iter 270 value 176.821424
+iter 280 value 170.172363
+iter 290 value 165.484078
+iter 300 value 157.818852
+iter 310 value 152.093997
+iter 320 value 146.838042
+iter 330 value 140.361614
+iter 340 value 135.881146
+iter 350 value 132.518357
+iter 360 value 129.629859
+iter 370 value 126.064336
+iter 380 value 123.345293
+iter 390 value 119.935141
+iter 400 value 116.459747
+iter 410 value 113.304016
+iter 420 value 110.030252
+iter 430 value 107.966866
+iter 440 value 105.929066
+iter 450 value 103.870138
+iter 460 value 101.177137
+iter 470 value 98.788440
+iter 480 value 96.347033
+iter 490 value 93.759668
+iter 500 value 90.542902
+final  value 90.542902 
+stopped after 500 iterations
+a 30-20-6 network with 746 weights
+inputs: V1 V2 V3 V41 V42 V43 V81 V82 V83 V121 V122 V123 V161 V162 V163 V201 V202 V203 V214 V215 V216 V227 V228 V229 V240 V241 V242 V253 V254 V255 
+output(s): V562 
+options were - softmax modelling 
+null device 
+          1 
+   testLabels
+      1   2   3   4   5   6
+  1 450  59  31   3   2   0
+  2  27 374  22   4   1   0
+  3  18  37 367   1   1   0
+  4   0   1   0 374  85   0
+  5   1   0   0 109 443   0
+  6   0   0   0   0   0 537
+feito.

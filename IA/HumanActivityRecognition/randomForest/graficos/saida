@@ -1,0 +1,30 @@
+Carregando dados...feito.
+Criando florestas...
+
+Call:
+ randomForest(formula = V562 ~ ., data = trainData[, c(means,      562)], xtest = testData[, means], ytest = testLabels, importance = T,      proximity = T) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 5
+
+        OOB estimate of  error rate: 3.43%
+Confusion matrix:
+     1    2   3    4    5    6  class.error
+1 1202   13  11    0    0    0 0.0195758564
+2   14 1039  20    0    0    0 0.0316868593
+3   15   15 956    0    0    0 0.0304259635
+4    0    1   0 1200   85    0 0.0668740280
+5    0    0   0   77 1297    0 0.0560407569
+6    0    1   0    0    0 1406 0.0007107321
+                Test set error rate: 11.16%
+Confusion matrix:
+    1   2   3   4   5   6 class.error
+1 455  32   9   0   0   0  0.08266129
+2  36 421  14   0   0   0  0.10615711
+3  23  53 344   0   0   0  0.18095238
+4   0   1   0 406  84   0  0.17311609
+5   0   1   0  76 455   0  0.14473684
+6   0   0   0   0   0 537  0.00000000
+null device 
+          1 
+feito.

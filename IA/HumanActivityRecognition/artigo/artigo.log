@@ -1,0 +1,662 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.9)  4 NOV 2014 18:21
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**artigo.tex
+(./artigo.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./artigo.sty
+Package: artigo 2001/06/09
+
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(./caption2.sty
+Package: caption2 2002/08/03 v2.1 Customising captions (AS)
+\captionmargin=\dimen111
+\captionwidth=\dimen112
+\captionindent=\dimen113
+Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
+e 147.
+\captionlinewidth=\dimen114
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+\c@instn=\count90
+
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box26
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen115
+\ttl@minus=\dimen116
+\ttl@toksa=\toks16
+\titlewidth=\dimen117
+\titlewidthlast=\dimen118
+\titlewidthfirst=\dimen119
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count92
+\U@D=\dimen122
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip45
+\subfigcapskip=\skip46
+\subfigcaptopadj=\dimen123
+\subfigbottomskip=\skip47
+\subfigcapmargin=\dimen124
+\subfiglabelskip=\skip48
+\c@subfigure=\count93
+\c@lofdepth=\count94
+\c@subtable=\count95
+\c@lotdepth=\count96
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip49
+\subfig@bottom=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count97
+\float@exts=\toks19
+\float@box=\box27
+\@float@everytoks=\toks20
+\@floatcapt=\box28
+)
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen125
+\extrarowheight=\dimen126
+\NC@list=\toks21
+\extratabsurround=\skip51
+\backup@length=\skip52
+)
+\everycr=\toks22
+\minrowclearance=\skip53
+)
+\rownum=\count98
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+) (./artigo.aux)
+\openout1 = `artigo.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(99.58464pt, 674.33032pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-9.68535pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count99
+\scratchdimen=\dimen127
+\scratchbox=\box29
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen128
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 29.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 29.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 31.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 77.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 77.
+
+<imagens/means1.pdf, id=13, 256.96pt x 256.96pt>
+File: imagens/means1.pdf Graphic file (type pdf)
+ <use imagens/means1.pdf>
+Package pdftex.def Info: imagens/means1.pdf used on input line 85.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means2.pdf, id=14, 256.96pt x 256.96pt>
+File: imagens/means2.pdf Graphic file (type pdf)
+ <use imagens/means2.pdf>
+Package pdftex.def Info: imagens/means2.pdf used on input line 88.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means3.pdf, id=15, 256.96pt x 256.96pt>
+File: imagens/means3.pdf Graphic file (type pdf)
+ <use imagens/means3.pdf>
+Package pdftex.def Info: imagens/means3.pdf used on input line 91.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means4.pdf, id=16, 256.96pt x 256.96pt>
+File: imagens/means4.pdf Graphic file (type pdf)
+ <use imagens/means4.pdf>
+Package pdftex.def Info: imagens/means4.pdf used on input line 94.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means5.pdf, id=17, 256.96pt x 256.96pt>
+File: imagens/means5.pdf Graphic file (type pdf)
+ <use imagens/means5.pdf>
+Package pdftex.def Info: imagens/means5.pdf used on input line 97.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+[2 <./imagens/means1.pdf> <./imagens/means2.pdf> <./imagens/means3.pdf> <./imag
+ens/means4.pdf> <./imagens/means5.pdf>]
+<imagens/means6.pdf, id=116, 256.96pt x 256.96pt>
+File: imagens/means6.pdf Graphic file (type pdf)
+ <use imagens/means6.pdf>
+Package pdftex.def Info: imagens/means6.pdf used on input line 108.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means7.pdf, id=117, 256.96pt x 256.96pt>
+File: imagens/means7.pdf Graphic file (type pdf)
+ <use imagens/means7.pdf>
+Package pdftex.def Info: imagens/means7.pdf used on input line 111.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means8.pdf, id=118, 256.96pt x 256.96pt>
+File: imagens/means8.pdf Graphic file (type pdf)
+ <use imagens/means8.pdf>
+Package pdftex.def Info: imagens/means8.pdf used on input line 114.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means9.pdf, id=119, 256.96pt x 256.96pt>
+File: imagens/means9.pdf Graphic file (type pdf)
+ <use imagens/means9.pdf>
+Package pdftex.def Info: imagens/means9.pdf used on input line 117.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+<imagens/means10.pdf, id=120, 256.96pt x 256.96pt>
+File: imagens/means10.pdf Graphic file (type pdf)
+ <use imagens/means10.pdf>
+Package pdftex.def Info: imagens/means10.pdf used on input line 120.
+(pdftex.def)             Requested size: 128.0387pt x 128.04054pt.
+
+[3 <./imagens/means6.pdf> <./imagens/means7.pdf> <./imagens/means8.pdf> <./imag
+ens/means9.pdf> <./imagens/means10.pdf>]
+<imagens/rfMeans1.pdf, id=225, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans1.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans1.pdf>
+Package pdftex.def Info: imagens/rfMeans1.pdf used on input line 139.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans2.pdf, id=226, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans2.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans2.pdf>
+Package pdftex.def Info: imagens/rfMeans2.pdf used on input line 142.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans3.pdf, id=227, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans3.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans3.pdf>
+Package pdftex.def Info: imagens/rfMeans3.pdf used on input line 145.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans4.pdf, id=228, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans4.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans4.pdf>
+Package pdftex.def Info: imagens/rfMeans4.pdf used on input line 148.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans5.pdf, id=229, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans5.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans5.pdf>
+Package pdftex.def Info: imagens/rfMeans5.pdf used on input line 151.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans6.pdf, id=230, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans6.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans6.pdf>
+Package pdftex.def Info: imagens/rfMeans6.pdf used on input line 154.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans7.pdf, id=231, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans7.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans7.pdf>
+Package pdftex.def Info: imagens/rfMeans7.pdf used on input line 157.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans8.pdf, id=232, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans8.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans8.pdf>
+Package pdftex.def Info: imagens/rfMeans8.pdf used on input line 160.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans9.pdf, id=233, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans9.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans9.pdf>
+Package pdftex.def Info: imagens/rfMeans9.pdf used on input line 163.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMeans10.pdf, id=234, 632.3625pt x 632.3625pt>
+File: imagens/rfMeans10.pdf Graphic file (type pdf)
+
+<use imagens/rfMeans10.pdf>
+Package pdftex.def Info: imagens/rfMeans10.pdf used on input line 166.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+<imagens/rfMean.pdf, id=235, 632.3625pt x 632.3625pt>
+File: imagens/rfMean.pdf Graphic file (type pdf)
+ <use imagens/rfMean.pdf>
+Package pdftex.def Info: imagens/rfMean.pdf used on input line 169.
+(pdftex.def)             Requested size: 128.0387pt x 128.0334pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./imagens/rfMeans1.pdf> <./imagens/rfMeans2.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans2.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans3.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans3.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans4.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans4.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans5.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans5.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans6.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans6.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans7.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans7.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans8.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans8.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans9.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans9.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./imagens/rfMeans10.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMeans10.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./imagens/rfMean.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/rfMean.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>] <imagens/nnet1.pdf, id=255, 632.3625pt x 632.3625pt>
+File: imagens/nnet1.pdf Graphic file (type pdf)
+
+<use imagens/nnet1.pdf>
+Package pdftex.def Info: imagens/nnet1.pdf used on input line 185.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet2.pdf, id=256, 632.3625pt x 632.3625pt>
+File: imagens/nnet2.pdf Graphic file (type pdf)
+
+<use imagens/nnet2.pdf>
+Package pdftex.def Info: imagens/nnet2.pdf used on input line 188.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet3.pdf, id=257, 632.3625pt x 632.3625pt>
+File: imagens/nnet3.pdf Graphic file (type pdf)
+
+<use imagens/nnet3.pdf>
+Package pdftex.def Info: imagens/nnet3.pdf used on input line 191.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet4.pdf, id=258, 632.3625pt x 632.3625pt>
+File: imagens/nnet4.pdf Graphic file (type pdf)
+
+<use imagens/nnet4.pdf>
+Package pdftex.def Info: imagens/nnet4.pdf used on input line 194.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet5.pdf, id=259, 632.3625pt x 632.3625pt>
+File: imagens/nnet5.pdf Graphic file (type pdf)
+
+<use imagens/nnet5.pdf>
+Package pdftex.def Info: imagens/nnet5.pdf used on input line 197.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet6.pdf, id=260, 632.3625pt x 632.3625pt>
+File: imagens/nnet6.pdf Graphic file (type pdf)
+
+<use imagens/nnet6.pdf>
+Package pdftex.def Info: imagens/nnet6.pdf used on input line 200.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet7.pdf, id=261, 632.3625pt x 632.3625pt>
+File: imagens/nnet7.pdf Graphic file (type pdf)
+
+<use imagens/nnet7.pdf>
+Package pdftex.def Info: imagens/nnet7.pdf used on input line 203.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet8.pdf, id=262, 632.3625pt x 632.3625pt>
+File: imagens/nnet8.pdf Graphic file (type pdf)
+
+<use imagens/nnet8.pdf>
+Package pdftex.def Info: imagens/nnet8.pdf used on input line 206.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet9.pdf, id=263, 632.3625pt x 632.3625pt>
+File: imagens/nnet9.pdf Graphic file (type pdf)
+
+<use imagens/nnet9.pdf>
+Package pdftex.def Info: imagens/nnet9.pdf used on input line 209.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ <imagens/nnet10.pdf, id=264, 632.3625pt x 632.3625pt>
+File: imagens/nnet10.pdf Graphic file (type pdf)
+
+<use imagens/nnet10.pdf>
+Package pdftex.def Info: imagens/nnet10.pdf used on input line 212.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+
+<imagens/nnetMean.pdf, id=265, 632.3625pt x 632.3625pt>
+File: imagens/nnetMean.pdf Graphic file (type pdf)
+
+<use imagens/nnetMean.pdf>
+Package pdftex.def Info: imagens/nnetMean.pdf used on input line 215.
+(pdftex.def)             Requested size: 98.16019pt x 98.15991pt.
+ [6 <./imagens/nnet1.pdf> <./imagens/nnet2.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet2.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet3.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet3.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet4.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet4.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet5.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet5.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet6.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet6.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet7.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet7.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet8.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet8.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet9.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet9.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./imagens/nnet10.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnet10.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+> <./imagens/nnetMean.pdf
+
+pdfTeX warning: pdflatex (file ./imagens/nnetMean.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] (./artigo.bbl) [7] (./artigo.aux) ) 
+Here is how much of TeX's memory you used:
+ 4009 strings out of 493304
+ 55629 string characters out of 6139872
+ 134252 words of memory out of 5000000
+ 7349 multiletter control sequences out of 15000+600000
+ 22111 words of font info for 45 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 41i,9n,35p,671b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/
+dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on artigo.pdf (7 pages, 5098372 bytes).
+PDF statistics:
+ 313 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+

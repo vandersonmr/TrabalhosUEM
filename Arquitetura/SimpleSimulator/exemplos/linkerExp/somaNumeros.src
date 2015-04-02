@@ -1,0 +1,16 @@
+.data
+      .rot1 "Digite um Numero => "
+      .rot2 "Soma => "
+.text
+global start
+.sair
+      exit
+.start
+      sys rot1,3
+      sys a,1
+      sys rot1,3
+      sys b,1
+      add c,a,b
+      sys rot2,3
+      sys c,2
+      jump sair

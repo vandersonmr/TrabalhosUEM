@@ -1,0 +1,44 @@
+.data
+    .rot1 "Digite N => "
+    .rot2 "Digite um numero => "
+    .rot3 "Maior => "
+    .rot4 "Menor => "
+    .rot5 "Erro N fora do alcance => "
+.text
+global start
+.start
+    sys rot1,3
+    sys n,1
+    jumpp Inicio,n
+    sys rot5,3
+    jump fim
+.Inicio
+    sys rot2,3
+    sys a,1
+    mov p,a
+    mov g,a
+    sub n,n,1
+    jumpp Volta,n
+    jump fim
+.Volta
+    sys rot2,3
+    sys a,1
+    sub r,a,g
+    jumpp TrocaG,r
+    sub r,p,a
+    jumpp TrocaP,r
+    jump Continua
+.TrocaG
+    mov g,a
+    jump Continua
+.TrocaP
+    mov p,a
+.Continua
+    sub n,n,1
+    jumpp Volta,n
+.Fim
+    sys rot3,3
+    sys g,2
+    sys rot4,3
+    sys p,2
+    exit

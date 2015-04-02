@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="gerenciadorCredito.Model.Lojista" table="LOJISTA">
+        <id name="id">
+            <generator class="increment"/>  
+        </id>
+                
+        <property name="email" column="EMAIL" type="string"/>
+        <property name="pass" column="PASS" type="string"/>
+        <property name="admin" column="ADMIN" type="integer"/>
+        <property name="cnpj" column="CNPJ" type="string"/>
+        <property name="codigoLogin" column="CODIGOLOGIN" type="string"/>
+        <property name="nome" column="NOME" type="string"/>
+        <property name="ramo" column="RAMO" type="string"/>
+        <property name="estado" column="ESTADO" type="string"/>
+        <property name="cep" column="CEP" type="string"/>
+        <property name="cidade" column="CIDADE" type="string"/>
+    </class>
+   
+</hibernate-mapping>

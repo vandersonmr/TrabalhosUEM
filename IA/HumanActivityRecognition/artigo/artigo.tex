@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+
+\usepackage{artigo}
+
+\usepackage{graphicx,url}
+
+\usepackage[brazil]{babel}   
+\usepackage[latin1]{inputenc}
+\usepackage{subfigure}  
+\usepackage{float}
+
+\usepackage[table]{xcolor}
+
+     
+\sloppy
+
+\title{Classificação de atividade humana usando dados de um celular através de florestas randômicas e redes neurais}
+
+\author{Vanderson Martins Rosario\inst{1}, Diogo Takayuki Murata\inst{1} }
+
+
+\address{ Departamento de informática - Universidade Estadual de Maringá
+  (UEM)\\
+  \email{\{ra67620, ra69553\}@uem.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+A nível organizacional, a hegemonia do ambiente político representa uma abertura para a melhoria do orçamento setorial. No entanto, não podemos esquecer que a constante divulgação das informações facilita a criação do sistema de formação de quadros que corresponde às necessidades. Gostaria de enfatizar que a complexidade dos estudos efetuados estende o alcance e a importância das formas de ação. 
+\end{abstract}
+     
+\begin{resumo} 
+A nível organizacional, a hegemonia do ambiente político representa uma abertura para a melhoria do orçamento setorial. No entanto, não podemos esquecer que a constante divulgação das informações facilita a criação do sistema de formação de quadros que corresponde às necessidades. Gostaria de enfatizar que a complexidade dos estudos efetuados estende o alcance e a importância das formas de ação. 
+\end{resumo}
+
+
+\section{Introdução}
+
+Com o uso de acelerômetros e giroscópios é possível obter informações espaciais sobre os dispositivos que os contêm. Esses componentes podem ser encontrados na maioria dos Smartphones, que são dispositivos populares e que são utilizados por grande parte da população. Sabendo disso, podemos então determinar as ações de pessoas através desses tipos de equipamento.
+
+No experimento dado, as informações foram capturadas de um grupo de 30 voluntários entre 19 e 48 anos de idade, que realizavam 6 atividades (Andar, Subir Escadas, Descer Escadas, Sentar, Ficar de pé e Deitar) enquanto estavam com um Smartphone (Samsung Galaxy S II) em seus quadris. Dentre os dados obtidos, 70\% foram utilizados para o treinamento e 30% para testes.
+
+Com o uso do Acelerômetro e do Giroscópio, foram capturadas informações aceleração linear e da velocidade angular entre os 3 eixos, numa taxa constante de 50Hz. Os sinais dos sensores foram pré-processados através da aplicação de filtros de ruído e então amostrados em janelas deslizantes de 2.56 segundos e 50\% de sobreposição (128 leituras/janela).
+
+O sinal do sensor de aceleração, que contém componentes gravitacionais e de movimentação de corpo foram separados usando um filtro de low-pass de Butterworth. Para a força gravitacional assumem-se apenas componentes de baixa frequência, assim um filtro de corte de 0.3Hz foi utilizado. Para cada janela um vetor de recursos foi obtido através do cálculo de variáveis do domínio do tempo e da frequência.
+
+\section{Metodologia}
+Os dados coletados possui 561 variáveis oriundos do domínio da frequência, obtidas por transformadas de fourier, e do tempo \cite{Oneto}. Em nossos experimentos não utilizamos as variáveis do domínio da frequência. Além disso, para cada dado coletado durante os experimentos é fornecido a média, desvio padrão, amplitude, entre outros; Contudo, apenas utilizamos a média para nossos experimentos.
+
+Os experimentos utilizam a média para cada eixo X, Y e Z dos seguintes dados coletados: tBodyAcc, tGravityAcc, tBodyAccJerk, tBodyGyro, tBodyGyroJerk. Os espaços formados por essas variáveis, incluindo a coloração dos pontos para cada atividade diferente, são mostrados na figura \ref{fig:espacoVariaveis1}.
+
+Em todos os gráficos serão utilizados as cores da tabela \ref{tab:tabelaCores} para cada atividade.
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|}
+\hline 
+Atividade & Cor \\ 
+\hline 
+Andando & \cellcolor{black} \\ 
+\hline
+Subindo escadas & \cellcolor{red} \\
+\hline
+Descendo escadas & \cellcolor{green} \\
+\hline
+Sentando & \cellcolor{blue} \\
+\hline
+Levantando & \cellcolor{cyan!50} \\
+\hline
+Deitando & \cellcolor{magenta!50} \\
+\hline 
+\end{tabular}
+\caption{Cores de cada atividade para interpretação dos gráficos.} 
+\label{tab:tabelaCores}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\subfigure[tBodyAcc] {
+	\includegraphics[width=.3\textwidth]{imagens/means1.pdf}
+}
+\subfigure[tGravityAcc] {
+	\includegraphics[width=.3\textwidth]{imagens/means2.pdf}
+}
+\subfigure[tBodyAccJerk] {
+	\includegraphics[width=.3\textwidth]{imagens/means3.pdf}
+}
+\subfigure[tBodyGyro] {
+	\includegraphics[width=.3\textwidth]{imagens/means4.pdf}
+}
+\subfigure[tBodyGyroJerk] {
+	\includegraphics[width=.3\textwidth]{imagens/means5.pdf}
+}
+\caption{Espaço formado pelas variáveis coletadas.}
+\label{fig:espacoVariaveis1}
+\end{figure}
+
+Além das variáveis da figura \ref{fig:espacoVariaveis1}, foram utilizados as seguintes: tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag. No entanto, essas não possuem 3 valores (eixos X, Y e Z), e portanto, para formar um espaço utilizamos a média como eixo X, o desvio padrão como eixo Y e o desvio absoluto médio como eixo Z. Dessa forma, como para as primeiras variáveis, formamos espaços com os pontos coletados diferenciados pela cor dependendo da atividade realizada durante a coleta, vide figura \ref{fig:espacoVariaveis2}. Também foram realizados experimentos com todas essas variáveis em conjunto.
+
+\begin{figure}[H]
+\centering
+\subfigure[tBodyAccMag] {
+	\includegraphics[width=.3\textwidth]{imagens/means6.pdf}
+}
+\subfigure[tGravityAccMag] {
+	\includegraphics[width=.3\textwidth]{imagens/means7.pdf}
+}
+\subfigure[tBodyAccJerkMag] {
+	\includegraphics[width=.3\textwidth]{imagens/means8.pdf}
+}
+\subfigure[tBodyGyroMag] {
+	\includegraphics[width=.3\textwidth]{imagens/means9.pdf}
+}
+\subfigure[tBodyGyroJerkMag] {
+	\includegraphics[width=.3\textwidth]{imagens/means10.pdf}
+}
+\caption{Espaço formado pelas variáveis coletadas.}
+\label{fig:espacoVariaveis2}
+\end{figure}
+
+Os experimentos foram implementados na linguagem R e executados em um sistema operacional Linux 3.16 de 64 bits. Todos os experimentos executaram em menos de um minuto em uma máquina com quatro \textit{threads} do processador Intel Core i5-3210M CPU @ 2.50GHz e 5,7 GiB de memória RAM.
+
+\subsection{Florestas Randômicas}
+
+Treinamos uma floresta randômica para classificar as atividades. Primeiramente, utilizamos cada variável e analisamos seu desempenho, posteriormente combinamos todas as florestas.
+
+A figura \ref{fig:erroTree} mostra os gráficos da quantidade de erros em porcentagem na classificação de cada atividade (cada linha) com a variação do número de árvores. Podemos perceber na figura \ref{fig:erroTree} que os melhores resultados foram obtidos com o tGravityAcc (b), onde o erro médio, representado pela linha preta, foi de 15 por cento para menos de 100 árvores. Todas as outras variáveis tiveram média de erro acima de 50 por cento.
+
+Por fim, combinamos todas as variáveis, figura \ref{fig:erroTree} (k), e obtivemos resultados bastantes significativos, já que o erro médio foi de 3.43 porcento. Sendo que a atividade de deitar foi classificado corretamente em 100 porcento dos casos.
+
+\begin{figure}[H]
+\centering
+\subfigure[tBodyAcc] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans1.pdf}
+}
+\subfigure[tGravityAcc] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans2.pdf}
+}
+\subfigure[tBodyAccJerk] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans3.pdf}
+}
+\subfigure[tBodyGyro] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans4.pdf}
+}
+\subfigure[tBodyGyroJerk] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans5.pdf}
+}
+\subfigure[tBodyAccMag] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans6.pdf}
+}
+\subfigure[tGravityAccMag] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans7.pdf}
+}
+\subfigure[tBodyAccJerkMag] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans8.pdf}
+}
+\subfigure[tBodyGyroMag] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans9.pdf}
+}
+\subfigure[tBodyGyroJerkMag] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMeans10.pdf}
+}
+\subfigure[Todos] {
+	\includegraphics[width=.3\textwidth]{imagens/rfMean.pdf}
+}
+\caption{Erro em porcentagem para cada quantidade de árvores na floresta para cada atividade.}
+\label{fig:erroTree}
+\end{figure}
+
+\subsection{Redes Neurais}
+
+Os experimentos foram executados para as redes neurais da mesma forma que para as florestas randômicas. Foram utilizados redes neurais de tamanho 3-10-6 para cada variável e 3-20-6 para todas em conjunto.
+
+Na figura \ref{fig:redesNeurais} podemos visualizar as redes. O peso de suas ligações é representado pela cor da aresta, cores mais escuras representam pesos maiores. As redes foram treinadas com um total de 500 iterações.
+
+As redes neurais quando aplicadas para cada variável obtiveram resultados em torno de 10 porcento melhores que as árvores randómicas. A variável tGravityAcc também teve os melhores resultados quando comparado com as outras variáveis. Entretanto, a rede neural para o conjunto de todas as variáveis teve um resultado inferior ao das florestas randómicas, tendo uma média de erro de 6,23 por cento.
+\begin{figure}[H]
+\centering
+\subfigure[tBodyAcc] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet1.pdf}
+}
+\subfigure[tGravityAcc] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet2.pdf}
+}
+\subfigure[tBodyAccJerk] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet3.pdf}
+}
+\subfigure[tBodyGyro] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet4.pdf}
+}
+\subfigure[tBodyGyroJerk] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet5.pdf}
+}
+\subfigure[tBodyAccMag] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet6.pdf}
+}
+\subfigure[tGravityAccMag] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet7.pdf}
+}
+\subfigure[tBodyAccJerkMag] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet8.pdf}
+}
+\subfigure[tBodyGyroMag] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet9.pdf}
+}
+\subfigure[tBodyGyroJerkMag] {
+	\includegraphics[width=.23\textwidth]{imagens/nnet10.pdf}
+}
+\subfigure[Todos] {
+	\includegraphics[width=.23\textwidth]{imagens/nnetMean.pdf}
+}
+\caption{Redes Neurais para cada variáveis coletada.}
+\label{fig:redesNeurais}
+\end{figure}
+
+\section{Conclusão}
+Os experimentos mostram que é possível prever qual atividade está sendo realizado pelo usuário de um celular apenas com os dados de seus sensores com uma boa precisão. Além disso, não utilizamos nem metade das variáveis obtidas pelo celular para o treinamento. Isso demonstra que se selecionado as melhores variáveis, como por exemplo o tGravityAcc, podemos obter resultados expressivos com treinamentos muito mais rápidos e com muito menos coleta de dados.
+
+Em trabalhos futuros é preciso realizar testes com todas as variáveis, já que acreditamos que com todas as 561 variáveis no treinamento os resultados devem ser ainda mais expressivos.
+
+\bibliographystyle{sbc}
+\bibliography{artigo}
+
+\end{document}

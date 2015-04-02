@@ -1,0 +1,24 @@
+.data
+	.rot1 "Digite um Numero => "
+	.rot2 "Fatorial => "
+	.rot " - "
+.text
+global start
+.sair
+	sys b,2
+	exit
+.start
+	mov z,70
+	mov b,1
+	sys rot1,3
+	sys a,1
+	sys rot2,3
+	call fatorial
+	jump sair
+.fatorial
+	mul b,b,a
+	sub a,a,1
+	jumpz retorna,a
+	call fatorial
+.retorna
+	ret

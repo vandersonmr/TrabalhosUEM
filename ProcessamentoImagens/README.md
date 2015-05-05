@@ -46,7 +46,7 @@ img[circle > r**2] = [0,0,0]
 ```python
 s = circle.astype(np.float32)/(r**2)
 ```
-
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue4.jpg)
 ![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue1.jpg)
 
 ```python

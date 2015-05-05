@@ -10,7 +10,7 @@ A wikipédia define cada um desses componentes como:
 
 Podemos representar parte do espaço de cores do HSV por meio de um círculo. Onde o ângulo representa a cor (HUE) e a distância até o centro do círculo representa o nível de pureza (saturation).
 
-Implementamos um programa em Python utilizando as bibliotécas NumPy e OpenCV para gerar tal círculo. Primeiramente importamos as bibliotecas e então definimos três variáveis globais: height, width e r (raio). Em seguida geramos uma mátriz (img) height * width * 3, onde a terceira dimensão é a RGB.
+Implementamos um programa em Python utilizando as bibliotecas NumPy e OpenCV para gerar tal círculo. Primeiramente importamos as bibliotecas e então definimos três variáveis globais: height, width e r (raio). Em seguida geramos uma mátriz (img) height * width * 3, onde a terceira dimensão é a RGB.
 
 ```python
 import numpy as np

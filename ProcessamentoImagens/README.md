@@ -85,4 +85,4 @@ cv2.imwrite('hue.jpg', (img*256).astype(np.uint16))
 ```
 
 #Licença
-Todas as imagens estão sobre Attribution-ShareAlike 4.0 International e o código sobre licença MIT.
+Todas as imagens estão sobre [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US) e o código sobre [licença MIT]().

@@ -25,7 +25,7 @@ img = np.ones((height, width, 3), np.float32)
 ```
 
 A matriz gerada está toda preenchida com uns, o que torna a imagem branca. Para delimitarmos um círculo nessa imagem geramos vetores (xx e yy) com os índices dessa matríz. Então geramos uma matriz circle onde cada posição dessa matriz contêm o valor da distância da posição até o centro da imagem. Por último, substituímos por [0, 0, 0] (preto) todos os pontos que estão a uma distância maior que r (raio).
-i
+
 ```python
 xx, yy = np.ogrid[:height, :width]
 circle = (xx - height/2) ** 2 + (yy - width/2) ** 2

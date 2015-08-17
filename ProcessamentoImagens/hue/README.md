@@ -35,7 +35,7 @@ img[circle > r**2] = [0,0,0]
 
 Como resultado temos uma imagem toda branca com todos os pontos que não pertecem ao círculo pintados de preto. Ou seja, temos um círculo branco.
 
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue3.jpg)
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue/hue3.jpg)
 
 Já sabemos como delimitar um círculo, agora precisamos colorir a imagem. Como o HUE varia de 0 a 360, temos que calcular o ângulo de todos os pontos em relação ao eixo das ordenadas de uma base posicionada em (heigth/2, widith/2). Para isso utilizamos a função arco tangente e as posições x e y de cada ponto. Note que a função arctan2 retorna valores em radianos e portanto temos que transforma-los em graus.
 
@@ -58,7 +58,7 @@ img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
 
 Substituímos então os valores da matriz img com os valores h na primeira coordenada, s na segunda e v na terceira. Enfim, usamos a função cvtColor para converter os valores em HSV para BGR de forma que possamos visualizar a imagem.
 
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue.jpg)
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue/hue.jpg)
 
 Utilizando a ideia anteriormente vista, pintamos todos os pontos que não estão no circulo como preto. O resultado é um circulo com as cores do HUE.
 
@@ -66,18 +66,18 @@ Utilizando a ideia anteriormente vista, pintamos todos os pontos que não estão
 img[circle > r**2] = [0,0,0]
 ```
 
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue2.jpg)
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue/hue2.jpg)
 
 Para gerarmos os valores do S, temos que normalizar os valores da distância entre o centro da base até a extremidade do círculo para 0 até 1. 
 
 ```python
 s = circle.astype(np.float32)/(r**2)
 ```
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue4.jpg)
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue/hue4.jpg)
 
 Feito isso, temos cores mais puras nas extremidades.
 
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue1.jpg)
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue/hue1.jpg)
 
 ```python
 cv2.imshow("circulo", img)

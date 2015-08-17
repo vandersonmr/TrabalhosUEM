@@ -42,7 +42,7 @@ def count(img, toPaint = 255):
                 num += 1
     return num
 ```
-Onde *num* conta a quantidade de componentes e *color* mantém a cor que será pintado cada componente. Já os dois *for* são responsáveis por iterarem por todos os vérticies e o *if* checa se o vértice já não foi visitado, em seguida é chamado uma função *paint* que simula o BFS e retorna o centroid do componente; nesse centroid é escrito o *num* do componente por meio da função *putText*.
+Onde *num* conta a quantidade de componentes e *color* mantém a cor que será pintado cada componente. Já os dois *for* são responsáveis por iterarem por todos os vértices e o *if* checa se o vértice já não foi visitado, em seguida é chamado uma função *paint* que simula o BFS e retorna o centroid do componente; nesse centroid é escrito o *num* do componente por meio da função *putText*.
 
 O BFS, ou *paint*, é implementado da seguinte forma:
 

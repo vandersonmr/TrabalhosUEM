@@ -2,7 +2,7 @@
 
 Toda imagem que possua apenas duas cores é uma imagem binária. Normalmente essas duas cores são representadas como branco (1) e preto (0).
 
-Para identificarmos objetos não convexos de uma mesma cor em uma imagem binária, utilizamos o mesmo algoritmo utilizado na teoria dos grafos para detecção de componentes conexos, a busca em largura. 
+Para identificarmos objetos não convexos de uma mesma cor em uma imagem binária, utilizamos o mesmo algoritmo utilizado na teoria dos grafos para detecção de componentes conexos: a busca em largura. 
 
 ![alt tag](https://upload.wikimedia.org/wikipedia/commons/9/99/Breadth-first_search_Algorithm.gif)
 

@@ -44,5 +44,47 @@ def count(img, toPaint = 255):
 ```
 Onde *num* conta a quantidade de componentes e *color* mantém a cor que será pintado cada componente. Já os dois *for* são responsáveis por iterarem por todos os vérticies e o *if* checa se o vértice já não foi visitado, em seguida é chamado uma função *paint* que simula o BFS e retorna o centroid do componente; nesse centroid é escrito o *num* do componente por meio da função *putText*.
 
+O BFS, ou *paint*, é implementado da seguinte forma:
+
+```python
+def isValid(img, x, y):
+    return x >= 0 and x < img.shape[0] and y >= 0 and y < img.shape[1]
+
+def paint(img, (x, y), color, toPaint = 255):
+    centroid = (x, y)
+    size = 0
+    queue = deque([(x, y)])
+    visited = img > 255
+    while len(queue) != 0:
+        a = queue.popleft()
+        img[a[0], a[1]] = color
+        centroid = (centroid[0] + a[0], centroid[1] + a[1])
+        size += 1
+        for nx, ny in [(a[0]+i, a[1]+j) for i in range(-1, 2) for j in range(-1, 2)]:
+            if isValid(img, nx, ny) and img[nx, ny] == toPaint and not visited[nx][ny]:
+                visited[nx][ny] = True
+                queue.append((nx, ny))
+    return centroid[1]/size, centroid[0]/size
+```
+
+Ou seja, uma implementação iterativa do algoritmo BFS com uma fila. 
+
+Assim, executamos o programa para algumas imagens de teste.
+
+![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img1.png)
+
+O resultado:
+
+![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg1.png)
+
+Note que como cada componente é pintado com um valor diferente, o histograma da imagem é exatamente a área de cada componente. Como podemos ver no histograma da primeira imagem:
+
+![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/hist.png)
+
+Por fim, algumas outras imagens que foram usadas como teste:
+* ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img2.png) ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg2.png)
+* ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img3.png) ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg3.png)
+* ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img4.jpg) ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg4.png)
+
 #Licença
 Todas as imagens estão sobre [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US) e o código sobre [licença MIT](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/LICENSE.txt).

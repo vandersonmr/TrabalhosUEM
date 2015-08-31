@@ -1,17 +1,17 @@
-# Contagem de Objetos em Uma Imagem Binária
+# Mosaico de Imagens
 
-Toda imagem que possua apenas duas cores é uma imagem binária. Normalmente essas duas cores são representadas como branco (1) e preto (0).
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/mosaicEb.png)
 
-Para identificarmos objetos não convexos de uma mesma cor em uma imagem binária, utilizamos o mesmo algoritmo utilizado na teoria dos grafos para detecção de componentes conexos: a busca em largura. 
+Um mosaico é uma junção de pedras ou outros objetos em um plano, geralmente parede ou chão, com objetivo de formar um desenho. No caso de um mosaico de imagens, como na figura a cima, é uma junção de imagens menores para formação de uma outra imagem.
 
-![alt tag](https://upload.wikimedia.org/wikipedia/commons/9/99/Breadth-first_search_Algorithm.gif)
-
-O pseudo código para detecção de componentes conexos é o seguinte:
+O pseudo-código proposto para geração de um mosaico de imagens é o seguinte:
 
 ```
-para todos os vértices V
-  se V ainda não foi processado
-    componente = BFS(V)
+Calular média de cor de todas as imagens do banco de imagens
+Para todo pixel P da imagem original
+  Encontrar, no banco, uma imagem A com a média mais próxima da média da subimagem retangular (P, P + tamanho de A)
+  Pintar A na imagem originial na posição P
+  Marcar todos pixels pintados como visitados
 ```
 
 Agora, vamos implementar esse mesmo algoritmo em Python com o OpenCV. Primeiramente, temos que abrir a imagem em escala de cinza:

@@ -2,7 +2,7 @@
 
 ![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/mosaicEb.png)
 
-Um mosaico é uma junção de pedras ou outros objetos em um plano, geralmente parede ou chão, com objetivo de formar um desenho. No caso de um mosaico de imagens, como na figura a cima, é uma junção de imagens menores para formação de uma outra imagem.
+Um mosaico é uma junção de pedras ou outros objetos em um plano, geralmente parede ou chão, com objetivo de formar um desenho. No caso de um mosaico de imagens, como na figura acima, é uma junção de imagens menores para formação de uma outra imagem.
 
 O pseudo-código proposto para geração de um mosaico de imagens é o seguinte:
 

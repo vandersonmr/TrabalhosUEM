@@ -7,14 +7,14 @@ Um mosaico é uma junção de pedras ou outros objetos em um plano, geralmente p
 O pseudo-código proposto para geração de um mosaico de imagens é o seguinte:
 
 ```
-Calular média de cor de todas as imagens do banco de imagens
-Para todo pixel P da imagem original
-  Encontrar, no banco, uma imagem A com a média mais próxima da média da subimagem retangular (P, P + tamanho de A)
-  Pintar A na imagem originial na posição P
-  Marcar todos pixels pintados como visitados
+1 Calular média de cor de todas as imagens do banco de imagens
+2 Para todo pixel P da imagem original
+3   Encontrar, no banco, uma imagem A com a média mais próxima da média da subimagem retangular (P, P + tamanho de A)
+4   Pintar A na imagem originial na posição P
+5   Marcar todos pixels pintados como visitados
 ```
 
-Agora, vamos implementar esse mesmo algoritmo em Python com o OpenCV. Primeiramente, temos que abrir a imagem em escala de cinza:
+Vamos analisar a complexidade de tempo do algoritmo. Para facilitar, vamos considerar o tamanho de todas as imagens como quadradas. Seja N o tamanho médio das imagens no banco de imagens e M o tamanho da imagem original, e ainda, seja S a quantidade de imagens no banco. Então a linha 1 tem complexidade O(SN²). Já a segunda linha é um loop que executa O(M²) vezes as linhas 3, de complexidade O(SN²), 4, de complexidade O(N²) e 5 de complexidade O(N²). Dessa forma a complexidade total do algoritmo de forma simplificada é O(SN²M²).
 
 ```python
 img = cv2.imread(sys.argv[1], cv2.CV_LOAD_IMAGE_GRAYSCALE)

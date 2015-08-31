@@ -7,16 +7,16 @@ Um mosaico é uma junção de pedras ou outros objetos em um plano, geralmente p
 O pseudo-código proposto para geração de um mosaico de imagens é o seguinte:
 
 ```
-1 Calular média de cor de todas as imagens do banco de imagens
+1 Calcular média de cor de todas as imagens do banco de imagens
 2 Para todo pixel P da imagem original
 3   Encontrar, no banco, uma imagem A com a média mais próxima da média da subimagem retangular (P, P + tamanho de A)
-4   Pintar A na imagem originial na posição P
+4   Pintar A na imagem original na posição P
 5   Marcar todos pixels pintados como visitados
 ```
 
 Para amortizarmos o tempo de execução, vamos utilizar programação dinâmica para poder calcular em O(1) a média de qualquer subimagem retangular da imagem original. 
 
-Para isso, primeiramente calculamos uma matriz W com peso acumulado, onde cada pixel é a soma do valor de todos os pixels do retangulo ((0,0), (x, y)). Como no código a seguir:
+Para isso, primeiramente calculamos uma matriz W com peso acumulado, onde cada pixel é a soma do valor de todos os pixels do retângulo ((0,0), (x, y)). Como no código a seguir:
 
 ```python
 W = np.zeros((img.shape[0], img.shape[1], img.shape[2]), dtype=np.uint64)
@@ -33,7 +33,7 @@ for i in range(0, img.shape[0]):
 
 ![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/pd1.png)
 
-Tendo a imagem acumulada, podemos calular a média em O(1) de qualquer subimagem retangular da seguinte forma:
+Tendo a imagem acumulada, podemos calcular a média em O(1) de qualquer subimagem retangular da seguinte forma:
 
 ```python
 def getMeanFrom(xb, yb, xa, ya):
@@ -99,7 +99,7 @@ Mosaico gerado com as imagens em 1/1024 do tamanho:
 
 # Métricas
 
-Em seguida, testamos outra métrica para cálulo da distância entre duas cores, que leva em consideração um peso maior para o vermelho, baseado na forma com que percebemos as cores. Contudo, os resultados foram muito semelhantes aos obitidos com distância euclidiana. Veja o maosaico gerado com as imagens em 1/1024 do tamanho e a métrica citada:
+Em seguida, testamos outra métrica para cálculo da distância entre duas cores, que leva em consideração um peso maior para o vermelho, baseado na forma com que percebemos as cores. Contudo, os resultados foram muito semelhantes aos obtidos com distância euclidiana. Veja o mosaico gerado com as imagens em 1/1024 do tamanho e a métrica citada:
 
 ![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/3-64/mosaic1.png)
 

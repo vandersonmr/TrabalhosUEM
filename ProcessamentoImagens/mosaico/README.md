@@ -139,7 +139,15 @@ Mosaico gerado com as imagens em 1/1024 do tamanho:
 
 # Tempo de Execução
 
-Por último, testamos o tempo de execução
+Por último, testamos o tempo de execução:
+
+Tamanho da Imagem/Tamanho do Conjunto
+(1)/130     : 33s
+(1)/(320)   : 1m12s
+(1/4)/(130) : 35s
+(1/4)/(320) : 1m57s
+(1/16)/(130): 47s
+(1/16)/(320): 2m17s
 
 #Licença
 Todas as imagens estão sobre [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US) e o código sobre [licença MIT](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/LICENSE.txt).

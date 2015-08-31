@@ -142,11 +142,17 @@ Mosaico gerado com as imagens em 1/1024 do tamanho:
 Por último, testamos o tempo de execução:
 
 Tamanho da Imagem/Tamanho do Conjunto
+
 (1)/130     : 33s
+
 (1)/(320)   : 1m12s
+
 (1/4)/(130) : 35s
+
 (1/4)/(320) : 1m57s
+
 (1/16)/(130): 47s
+
 (1/16)/(320): 2m17s
 
 #Licença

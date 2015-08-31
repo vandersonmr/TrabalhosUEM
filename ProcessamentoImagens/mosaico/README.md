@@ -67,6 +67,8 @@ def doMosaic(img, db, width, e = False):
     return newImg
 ```
 
+# Tamanho das imagens
+
 Para testarmos, utilizamos um banco de dados de 130 imagens para gerar a imagem da Lena, a seguir:
 
 ![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena.com)
@@ -95,7 +97,49 @@ Mosaico gerado com as imagens em 1/1024 do tamanho:
 
 ![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/3-64/mosaicE.png)
 
+# Métricas
 
+Em seguida, testamos outra métrica para cálulo da distância entre duas cores, que leva em consideração um peso maior para o vermelho, baseado na forma com que percebemos as cores. Contudo, os resultados foram muito semelhantes aos obitidos com distância euclidiana. Veja o maosaico gerado com as imagens em 1/1024 do tamanho e a métrica citada:
+
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/3-64/mosaic1.png)
+
+# Conjunto de Imagens
+
+Para testarmos o impacto do conjunto de imagens nos mosaicos gerados, adicionamos 190 novas imagens ao conjunto anterior. Os mosaicos resultantes:
+
+Mosaico gerado com as imagens em 1/64 do tamanho:
+
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/6-16/mosaic1.png)
+
+Mosaico gerado com as imagens em 1/256 do tamanho:
+
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/6-32/mosaic1.png)
+
+Mosaico gerado com as imagens em 1/1024 do tamanho:
+
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/6-64/mosaic1.png)
+
+Note que os mosaicos se aproximaram mais dos detalhes da original e também na coloração. 
+
+# Blend
+
+Em seguida, para melhorarmos mais ainda o resultado, aplicamos um blend com a imagem original (20% da cor de cada pixel vem da imagem original e 80% do mosaico). Veja o código e o resultado:
+
+```python
+def blend(img1, img2):
+    return (img1*0.2 + img2*0.8)/255
+```
+Mosaico gerado com as imagens com tamanho original:
+
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/6-2/mosaic1b.png)
+
+Mosaico gerado com as imagens em 1/1024 do tamanho:
+
+![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/mosaico/lena/6-64/mosaic1b.png)
+
+# Tempo de Execução
+
+Por último, testamos o tempo de execução
 
 #Licença
 Todas as imagens estão sobre [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US) e o código sobre [licença MIT](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/LICENSE.txt).

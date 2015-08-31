@@ -1,88 +1,90 @@
-# Espaço de Cores HSV
+# Contagem de Objetos em Uma Imagem Binária
 
-HSV é um sistema de cores formada por três componentes, a saber: *hue* (H), *saturation* (S) e *value* (V).
+Toda imagem que possua apenas duas cores é uma imagem binária. Normalmente essas duas cores são representadas como branco (1) e preto (0).
 
-A wikipédia define cada um desses componentes como:
+Para identificarmos objetos não convexos de uma mesma cor em uma imagem binária, utilizamos o mesmo algoritmo utilizado na teoria dos grafos para detecção de componentes conexos: a busca em largura. 
 
-* **HUE**: Verifica o tipo de cor, abrangendo todas as cores do espectro, desde o vermelho até o violeta, mais o magenta.
-* **Saturation**: Também chamado de "pureza". Quanto menor esse valor, mais com tom de cinza aparecerá a imagem. Quanto maior o valor, mais "pura" é a imagem.
-* **Value**: Define o brilho da cor.
+![alt tag](https://upload.wikimedia.org/wikipedia/commons/9/99/Breadth-first_search_Algorithm.gif)
 
-Podemos representar parte do espaço de cores do HSV por meio de um círculo. Onde o ângulo representa a cor (HUE) e a distância até o centro do círculo representa o nível de pureza (saturation).
+O pseudo código para detecção de componentes conexos é o seguinte:
 
-Implementamos um programa em Python utilizando as bibliotecas NumPy e OpenCV para gerar tal círculo. Primeiramente importamos as bibliotecas e então definimos três variáveis globais: height, width e r (raio). Em seguida geramos uma mátriz (img) height * width * 3, onde a terceira dimensão é a RGB.
-
-```python
-import numpy as np
-import cv2
-import math
-
-height = 1024
-width = 1920
-r = 500
-
-img = np.ones((height, width, 3), np.float32)
+```
+para todos os vértices V
+  se V ainda não foi processado
+    componente = BFS(V)
 ```
 
-A matriz gerada está toda preenchida com uns, o que torna a imagem branca. Para delimitarmos um círculo nessa imagem geramos vetores (xx e yy) com os índices dessa matríz. Então geramos uma matriz circle onde cada posição dessa matriz contêm o valor da distância da posição até o centro da imagem. Por último, substituímos por [0, 0, 0] (preto) todos os pontos que estão a uma distância maior que r (raio).
+Agora, vamos implementar esse mesmo algoritmo em Python com o OpenCV. Primeiramente, temos que abrir a imagem em escala de cinza:
 
 ```python
-xx, yy = np.ogrid[:height, :width]
-circle = (xx - height/2) ** 2 + (yy - width/2) ** 2
-
-img[circle > r**2] = [0,0,0]
+img = cv2.imread(sys.argv[1], cv2.CV_LOAD_IMAGE_GRAYSCALE)
 ```
 
-Como resultado temos uma imagem toda branca com todos os pontos que não pertecem ao círculo pintados de preto. Ou seja, temos um círculo branco.
-
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue3.jpg)
-
-Já sabemos como delimitar um círculo, agora precisamos colorir a imagem. Como o HUE varia de 0 a 360, temos que calcular o ângulo de todos os pontos em relação ao eixo das ordenadas de uma base posicionada em (heigth/2, widith/2). Para isso utilizamos a função arco tangente e as posições x e y de cada ponto. Note que a função arctan2 retorna valores em radianos e portanto temos que transforma-los em graus.
+Em seguida garantimos que a imagem é binária:
 
 ```python
-h = np.arctan2(xx.astype(np.float32)-height/2, yy.astype(np.float32)-width/2)
-h = np.degrees(h)+90
-s = np.ones((height, width), np.uint32)
-v = np.ones((height, width), np.uint32)
+img[img > 127] = 255
+img[img < 127] = 0
 ```
 
-Feito isso, temos os valores de H. Os valores de S e V vamos deixar todos como 1 (100%).
+Agora vamos implementar o pseudo código a cima citado: 
 
 ```python
-img[:,:,0] = h
-img[:,:,1] = s
-img[:,:,2] = v
-
-img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
+def count(img, toPaint = 255):
+    num = 0
+    color = 100
+    for x in range(0, img.shape[0]):
+        for y in range(0, img.shape[1]):
+            if img[x, y] == toPaint:
+                centroid = paint(img, (x, y), color, toPaint)
+                cv2.putText(img,str(num),centroid,font,0.7,(250,250,250),2)
+                color = (color + 1) % 240 + 1
+                num += 1
+    return num
 ```
+Onde *num* conta a quantidade de componentes e *color* mantém a cor que será pintado cada componente. Já os dois *for* são responsáveis por iterarem por todos os vértices e o *if* checa se o vértice já não foi visitado, em seguida é chamado uma função *paint* que simula o BFS e retorna o centroid do componente; nesse centroid é escrito o *num* do componente por meio da função *putText*.
 
-Substituímos então os valores da matriz img com os valores h na primeira coordenada, s na segunda e v na terceira. Enfim, usamos a função cvtColor para converter os valores em HSV para BGR de forma que possamos visualizar a imagem.
-
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue.jpg)
-
-Utilizando a ideia anteriormente vista, pintamos todos os pontos que não estão no circulo como preto. O resultado é um circulo com as cores do HUE.
+O BFS, ou *paint*, é implementado da seguinte forma:
 
 ```python
-img[circle > r**2] = [0,0,0]
+def isValid(img, x, y):
+    return x >= 0 and x < img.shape[0] and y >= 0 and y < img.shape[1]
+
+def paint(img, (x, y), color, toPaint = 255):
+    centroid = (x, y)
+    size = 0
+    queue = deque([(x, y)])
+    visited = img > 255
+    while len(queue) != 0:
+        a = queue.popleft()
+        img[a[0], a[1]] = color
+        centroid = (centroid[0] + a[0], centroid[1] + a[1])
+        size += 1
+        for nx, ny in [(a[0]+i, a[1]+j) for i in range(-1, 2) for j in range(-1, 2)]:
+            if isValid(img, nx, ny) and img[nx, ny] == toPaint and not visited[nx][ny]:
+                visited[nx][ny] = True
+                queue.append((nx, ny))
+    return centroid[1]/size, centroid[0]/size
 ```
 
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue2.jpg)
+Ou seja, uma implementação iterativa do algoritmo BFS com uma fila. 
 
-Para gerarmos os valores do S, temos que normalizar os valores da distância entre o centro da base até a extremidade do círculo para 0 até 1. 
+Assim, executamos o programa para algumas imagens de teste.
 
-```python
-s = circle.astype(np.float32)/(r**2)
-```
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue4.jpg)
+![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img1.png)
 
-Feito isso, temos cores mais puras nas extremidades.
+O resultado:
 
-![alt tag](https://github.com/vandersonmr/TrabalhosUEM/raw/master/ProcessamentoImagens/hue1.jpg)
+![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg1.png)
 
-```python
-cv2.imshow("circulo", img)
-cv2.imwrite('hue.jpg', (img*256).astype(np.uint16))
-```
+Note que como cada componente é pintado com um valor diferente, o histograma da imagem é exatamente a área de cada componente. Como podemos ver no histograma da primeira imagem:
+
+![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/hist.png)
+
+Por fim, algumas outras imagens que foram usadas como teste:
+* ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img2.png) ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg2.png)
+* ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img3.png) ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg3.png)
+* ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/img4.jpg) ![alt tag](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/counting/countImg4.png)
 
 #Licença
 Todas as imagens estão sobre [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en_US) e o código sobre [licença MIT](https://raw.githubusercontent.com/vandersonmr/TrabalhosUEM/master/ProcessamentoImagens/LICENSE.txt).
